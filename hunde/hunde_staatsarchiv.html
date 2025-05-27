@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunde im Staatsarchiv</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 30px;
+            color: #333;
+        }
+        .info {
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .dog-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .dog-img-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            cursor: pointer;
+        }
+        .dog-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+        .dog-img:hover {
+            transform: scale(1.05);
+        }
+        .rainbow {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 180px;
+            height: 90px;
+            pointer-events: none;
+            transform: translate(-50%, -50%) scale(0.7);
+            opacity: 0;
+            animation: rainbow-fly 1.2s cubic-bezier(.4,2,.6,.9) forwards;
+        }
+        @keyframes rainbow-fly {
+            0% {
+                opacity: 0.7;
+                transform: translate(-50%, -50%) scale(0.7) rotate(-10deg);
+            }
+            60% {
+                opacity: 1;
+                transform: translate(-50%, -120%) scale(1.1) rotate(10deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -250%) scale(1.2) rotate(-10deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hunde im Staatsarchiv</h1>
+    <div class="info">
+        Willkommen im virtuellen Staatsarchiv! Hier bewachen freundliche Hunde die wertvollen Dokumente.<br>
+        Klicke auf einen Hund, um einen Regenbogen zu zaubern!
+    </div>
+    <div class="dog-gallery" id="dogGallery"></div>
+    <script>
+        // Anzahl der Hundebilder
+        const DOG_COUNT = 8;
+        // Galerie-Container
+        const gallery = document.getElementById('dogGallery');
+
+        // Funktion, um ein Regenbogen-Element zu erzeugen
+        function createRainbow() {
+            const rainbow = document.createElement('div');
+            rainbow.className = 'rainbow';
+            rainbow.innerHTML = `
+                <svg width="180" height="90" viewBox="0 0 180 90">
+                    <defs>
+                        <linearGradient id="rainbow" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ff0000"/>
+                            <stop offset="16%" stop-color="#ff9900"/>
+                            <stop offset="33%" stop-color="#ffee00"/>
+                            <stop offset="50%" stop-color="#33ff00"/>
+                            <stop offset="66%" stop-color="#00ccff"/>
+                            <stop offset="83%" stop-color="#3300ff"/>
+                            <stop offset="100%" stop-color="#cc00ff"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M10,80 Q90,10 170,80" stroke="url(#rainbow)" stroke-width="18" fill="none"/>
+                </svg>
+            `;
+            return rainbow;
+        }
+
+        // Funktion, um Hundebilder zu laden
+        async function loadDogs() {
+            for (let i = 0; i < DOG_COUNT; i++) {
+                const res = await fetch('https://dog.ceo/api/breeds/image/random');
+                const data = await res.json();
+                const imgUrl = data.message;
+                const container = document.createElement('div');
+                container.className = 'dog-img-container';
+                const img = document.createElement('img');
+                img.src = imgUrl;
+                img.alt = 'Hund im Staatsarchiv';
+                img.className = 'dog-img';
+                container.appendChild(img);
+                container.addEventListener('click', () => {
+                    const rainbow = createRainbow();
+                    container.appendChild(rainbow);
+                    setTimeout(() => rainbow.remove(), 1300);
+                });
+                gallery.appendChild(container);
+            }
+        }
+        loadDogs();
+    </script>
+</body>
+</html>
