@@ -1,0 +1,6 @@
+# Reports directory
+# Each run creates a timestamped subdirectory: YYYY-MM_timestamp/
+
+# Ignore all subdirectories except .gitkeep
+*/
+!.gitkeep

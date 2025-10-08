@@ -1,0 +1,56 @@
+name: Check Media Usage via GLAM Tools
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  check-usage-glamtools:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install Chrome and ChromeDriver
+      run: |
+        # Install Chrome
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+        
+        # Chrome version
+        google-chrome --version
+    
+    - name: Install Python dependencies
+      run: |
+        pip install selenium
+    
+    - name: Run GLAM Tools check
+      run: |
+        python check_media_glamtools.py
+    
+    - name: Commit and push reports
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add reports/
+        git diff --staged --quiet || git commit -m "Update media usage report - $(date +'%Y-%m-%d')"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Upload reports as artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: media-usage-reports-${{ github.run_number }}
+        path: reports/
+        retention-days: 90
