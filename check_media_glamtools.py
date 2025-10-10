@@ -38,7 +38,7 @@ MONTH_FOR_FORM = str(target_month)
 IS_FIRST_DAY_OF_MONTH = current_date.day == 1
 PREVIOUS_DATASET_YEAR, PREVIOUS_DATASET_MONTH = previous_month(target_year, target_month)
 BASE_OUTPUT_DIR = Path("reports")
-TIMEOUT = 600  # 10 minutes max wait time (GLAM Tools can take time to load)
+TIMEOUT = 120  # 2 minutes max wait time (GLAM Tools can take time to load)
 
 
 def parse_int(value: str) -> Optional[int]:
