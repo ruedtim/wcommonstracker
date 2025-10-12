@@ -1,0 +1,4 @@
+Changes compared to previous report (2025-09_20251012_030708_[0]):
+- Media files used: 0 (current total: 319)
+- Pages using media: +1 (current total: 938)
+- File views: 0 (current total: 841954)
