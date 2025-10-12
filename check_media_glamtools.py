@@ -309,6 +309,12 @@ def format_signed(value: int) -> str:
     return f"+{value}" if value > 0 else str(value)
 
 
+def format_optional_difference(value: Optional[int]) -> str:
+    if value is None:
+        return "unknown"
+    return format_signed(value)
+
+
 def calculate_summary_differences(
     current_summary: Dict[str, Any], previous_summary: Dict[str, Any]
 ) -> Dict[str, int]:
@@ -684,8 +690,7 @@ def create_changes_summary_file(
 
     differences = calculate_summary_differences(current_summary, previous_summary)
     views_diff = differences.get("views")
-    if views_diff is None or views_diff == 0:
-        return
+    views_diff_display = format_optional_difference(views_diff)
 
     current_files_used = current_summary.get("files_used")
     previous_files_used = previous_summary.get("files_used")
@@ -723,8 +728,19 @@ def create_changes_summary_file(
         f"Changes compared to previous report ({previous_report['path'].name}):",
         f"- Media files used: {format_signed(files_diff)} (current total: {current_files_used})",
         f"- Pages using media: {format_signed(pages_diff)} (current total: {current_summary.get('pages_used', 'unknown')})",
-        f"- File views: {format_signed(views_diff)} (current total: {current_views_value})",
+        f"- File views: {views_diff_display} (current total: {current_views_value})",
     ]
+
+    has_change = any(
+        [
+            files_diff != 0,
+            pages_diff != 0,
+            any(value for value in differences.values() if value),
+        ]
+    )
+
+    if not has_change:
+        lines.append("- No metric changes detected compared to the previous report.")
 
     if files_diff != 0:
         if added_urls:
