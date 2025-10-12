@@ -12,6 +12,7 @@ from selenium.webdriver.chrome.options import Options
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+from dataclasses import dataclass
 from bs4 import BeautifulSoup
 import time
 import json
@@ -19,9 +20,29 @@ import re
 
 # Configuration
 GLAMTOOLS_URL = "https://glamtools.toolforge.org/glamorgan.html"
-CATEGORY = "Media supplied by Universitätsarchiv St. Gallen"
 DEPTH = "12"
 # Use previous month to ensure data is available
+
+
+@dataclass(frozen=True)
+class CategoryConfig:
+    name: str
+    report_subdir: str
+
+
+REPORTS_ROOT = Path("reports")
+CATEGORY_CONFIGS: List[CategoryConfig] = [
+    CategoryConfig(
+        name="Media supplied by Universitätsarchiv St. Gallen",
+        report_subdir="HSG Archiv",
+    ),
+    CategoryConfig(name="Rahn Collection", report_subdir="Rahn Collection"),
+    CategoryConfig(
+        name="Breitinger Collection", report_subdir="Breitinger Collection"
+    ),
+]
+
+CATEGORY = CATEGORY_CONFIGS[0].name
 
 
 def previous_month(year: int, month: int) -> Tuple[int, int]:
@@ -37,7 +58,7 @@ MONTH = f"{target_month:02d}"
 MONTH_FOR_FORM = str(target_month)
 IS_FIRST_DAY_OF_MONTH = current_date.day == 1
 PREVIOUS_DATASET_YEAR, PREVIOUS_DATASET_MONTH = previous_month(target_year, target_month)
-BASE_OUTPUT_DIR = Path("reports")
+BASE_OUTPUT_DIR = REPORTS_ROOT / CATEGORY_CONFIGS[0].report_subdir
 TIMEOUT = 120  # 2 minutes max wait time (GLAM Tools can take time to load)
 
 
@@ -824,15 +845,26 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
     return output_dir
 
 
-def main():
-    """Main execution function"""
+def run_category(config: CategoryConfig) -> None:
+    """Execute the GLAM Tools check for a single category."""
+
+    global CATEGORY, BASE_OUTPUT_DIR
+
+    CATEGORY = config.name
+    BASE_OUTPUT_DIR = REPORTS_ROOT / config.report_subdir
+
+    separator = "=" * 80
+    print(f"\n{separator}")
+    print(f"Processing category: {CATEGORY}")
+    print(separator)
+
     driver = None
     try:
         print("Starting GLAM Tools browser automation...")
         print(f"Category: {CATEGORY}")
         print(f"Depth: {DEPTH}")
         print(f"Year/Month: {YEAR}/{MONTH}\n")
-        
+
         driver = setup_driver(headless=True)
         previous_report = get_latest_report()
         fill_form_and_submit(driver)
@@ -840,25 +872,32 @@ def main():
         expand_full_results(driver)
         output_dir = save_results(driver, previous_report)
 
-        print("\n✓ Process completed successfully!")
+        print(f"\n✓ Process completed successfully for {CATEGORY}!")
         print(f"Results saved to {output_dir}/")
 
     except Exception as e:
-        print(f"\n✗ Error occurred: {e}")
+        print(f"\n✗ Error occurred while processing {CATEGORY}: {e}")
         if driver:
-            # Save error screenshot
             BASE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-            error_screenshot = BASE_OUTPUT_DIR / f"error_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.png"
+            error_screenshot = BASE_OUTPUT_DIR / (
+                f"error_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.png"
+            )
             try:
                 save_screenshot_at_top(driver, error_screenshot)
                 print(f"Error screenshot saved: {error_screenshot}")
-            except:
+            except Exception:
                 pass
         raise
     finally:
         if driver:
             driver.quit()
             print("Browser closed")
+
+
+def main():
+    print("Starting GLAM Tools browser automation for configured categories...")
+    for config in CATEGORY_CONFIGS:
+        run_category(config)
 
 
 if __name__ == "__main__":
