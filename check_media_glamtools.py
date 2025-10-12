@@ -100,7 +100,7 @@ def extract_summary_stats_from_html(html: str) -> Dict[str, Optional[int]]:
 
 
 def extract_file_entries_from_html(html: str) -> List[Dict[str, Any]]:
-    """Extract media entries (title, url, views) from the HTML table."""
+    """Extract media entries (title, url, views, usages) from the HTML table."""
     soup = BeautifulSoup(html, "html.parser")
     table = soup.select_one("#output table.table-striped")
     files: List[Dict[str, Any]] = []
@@ -108,11 +108,41 @@ def extract_file_entries_from_html(html: str) -> List[Dict[str, Any]]:
     if not table:
         return files
 
+    current_file: Optional[Dict[str, Any]] = None
+
     for row in table.find_all("tr"):
         file_link = row.find(
             "a", href=lambda href: href and "commons.wikimedia.org/wiki/File" in href
         )
         if not file_link:
+            if not current_file:
+                continue
+
+            cells = row.find_all("td")
+            if len(cells) < 2:
+                continue
+
+            wiki = cells[0].get_text(strip=True)
+            page_cell = cells[1]
+            page_link = page_cell.find("a")
+            page_title = page_link.get_text(strip=True) if page_link else page_cell.get_text(strip=True)
+            if not wiki and not page_title:
+                continue
+
+            usage: Dict[str, Any] = {
+                "wiki": wiki,
+                "title": page_title,
+            }
+            if page_link and page_link.get("href"):
+                usage["url"] = page_link.get("href")
+
+            if len(cells) >= 3:
+                views_text = cells[2].get_text(strip=True)
+                views_value = parse_int(views_text)
+                if views_value is not None:
+                    usage["views"] = views_value
+
+            current_file.setdefault("usages", []).append(usage)
             continue
 
         cells = row.find_all(["td", "th"])
@@ -120,13 +150,13 @@ def extract_file_entries_from_html(html: str) -> List[Dict[str, Any]]:
         if len(cells) >= 3:
             views = parse_int(cells[2].get_text(strip=True))
 
-        files.append(
-            {
-                "title": file_link.get_text(strip=True),
-                "url": file_link.get("href"),
-                "views": views,
-            }
-        )
+        current_file = {
+            "title": file_link.get_text(strip=True),
+            "url": file_link.get("href"),
+            "views": views,
+            "usages": [],
+        }
+        files.append(current_file)
 
     return files
 
@@ -159,8 +189,9 @@ def load_report_data(report_dir: Path) -> Optional[Dict[str, Any]]:
     if html_content:
         if not summary:
             summary = extract_summary_stats_from_html(html_content)
-        if not files:
-            files = extract_file_entries_from_html(html_content)
+        parsed_files = extract_file_entries_from_html(html_content)
+        if parsed_files:
+            files = parsed_files
 
     timestamp = metadata.get("timestamp")
     if not timestamp:
@@ -351,6 +382,7 @@ def write_comparison_summary(
 
     differences = calculate_summary_differences(current_summary, previous_summary)
     views_diff = differences.get("views")
+    views_diff_display = format_optional_difference(views_diff)
 
     current_files_used = current_summary.get("files_used")
     if current_files_used is None:
@@ -369,14 +401,23 @@ def write_comparison_summary(
     pages_previous_value = previous_summary.get("pages_used")
     pages_current_value = current_summary.get("pages_used")
 
-    pages_previous = int(pages_previous_value) if pages_previous_value is not None else 0
-    pages_current = int(pages_current_value) if pages_current_value is not None else 0
-    pages_diff = pages_current - pages_previous
+    pages_diff_value: Optional[int]
+    if pages_previous_value is None or pages_current_value is None:
+        pages_diff_value = None
+        pages_diff_display = "unknown"
+    else:
+        pages_previous = int(pages_previous_value)
+        pages_current = int(pages_current_value)
+        pages_diff_value = pages_current - pages_previous
+        pages_diff_display = format_signed(pages_diff_value)
 
     current_views_value = current_summary.get("views")
-    current_views_display = current_views_value if current_views_value is not None else "unknown"
+    current_views_display = (
+        current_views_value if current_views_value is not None else "unknown"
+    )
 
-    views_diff_value = views_diff if views_diff is not None else 0
+    current_pages_total = current_summary.get("pages_used")
+    current_pages_display = current_pages_total if current_pages_total is not None else "unknown"
 
     previous_files_by_url = {
         item["url"]: item
@@ -390,12 +431,65 @@ def write_comparison_summary(
     added_urls = sorted(set(current_files_by_url) - set(previous_files_by_url))
     removed_urls = sorted(set(previous_files_by_url) - set(current_files_by_url))
 
+    def build_usage_lookup(files_by_url: Dict[str, Dict[str, Any]]) -> Dict[Tuple[str, str, str, str], Dict[str, Any]]:
+        lookup: Dict[Tuple[str, str, str, str], Dict[str, Any]] = {}
+        for media_url, item in files_by_url.items():
+            media_title = item.get("title") or media_url
+            for usage in item.get("usages") or []:
+                wiki = (usage.get("wiki") or "").strip()
+                page_title = (usage.get("title") or usage.get("page_title") or "").strip()
+                page_url = (usage.get("url") or usage.get("page_url") or "").strip()
+                if not wiki and not page_title:
+                    continue
+                key = (wiki, page_title, page_url, media_url)
+                lookup[key] = {
+                    "wiki": wiki or "unknown",
+                    "page_title": page_title or "unknown",
+                    "page_url": page_url,
+                    "media_title": media_title,
+                    "media_url": media_url,
+                }
+        return lookup
+
+    previous_usage_lookup = build_usage_lookup(previous_files_by_url)
+    current_usage_lookup = build_usage_lookup(current_files_by_url)
+
+    added_usage_keys = set(current_usage_lookup) - set(previous_usage_lookup)
+    removed_usage_keys = set(previous_usage_lookup) - set(current_usage_lookup)
+
+    def sort_usage(details: Dict[str, Any]) -> Tuple[str, str, str]:
+        return (
+            details.get("wiki") or "",
+            details.get("page_title") or "",
+            details.get("media_title") or "",
+        )
+
+    added_usage_details = sorted(
+        (current_usage_lookup[key] for key in added_usage_keys), key=sort_usage
+    )
+    removed_usage_details = sorted(
+        (previous_usage_lookup[key] for key in removed_usage_keys), key=sort_usage
+    )
+
+    page_usage_changes_present = bool(added_usage_details or removed_usage_details)
+
     lines = [
         heading,
         f"- Media files used: {format_signed(files_diff)} (current total: {current_files_used})",
-        f"- Pages using media: {format_signed(pages_diff)} (current total: {current_summary.get('pages_used', 'unknown')})",
-        f"- File views: {format_signed(views_diff_value)} (current total: {current_views_display})",
+        f"- Pages using media: {pages_diff_display} (current total: {current_pages_display})",
+        f"- File views: {views_diff_display} (current total: {current_views_display})",
     ]
+
+    has_metric_change = any(
+        [
+            files_diff != 0,
+            pages_diff_value not in (None, 0),
+            views_diff not in (None, 0),
+        ]
+    )
+
+    if not has_metric_change and not page_usage_changes_present:
+        lines.append("- No metric changes detected compared to the previous report.")
 
     if files_diff != 0:
         if added_urls:
@@ -410,6 +504,28 @@ def write_comparison_summary(
                 item = previous_files_by_url[url]
                 title = item.get("title") or url
                 lines.append(f"    - {title} ({url})")
+
+    if page_usage_changes_present:
+        if added_usage_details:
+            lines.append("  Pages that started using media:")
+            for detail in added_usage_details:
+                page_display = f"{detail['wiki']}: {detail['page_title']}"
+                if detail.get("page_url"):
+                    page_display += f" ({detail['page_url']})"
+                media_display = detail["media_title"]
+                if detail.get("media_url"):
+                    media_display += f" ({detail['media_url']})"
+                lines.append(f"    - {page_display} now uses {media_display}")
+        if removed_usage_details:
+            lines.append("  Pages that stopped using media:")
+            for detail in removed_usage_details:
+                page_display = f"{detail['wiki']}: {detail['page_title']}"
+                if detail.get("page_url"):
+                    page_display += f" ({detail['page_url']})"
+                media_display = detail["media_title"]
+                if detail.get("media_url"):
+                    media_display += f" ({detail['media_url']})"
+                lines.append(f"    - {page_display} stopped using {media_display}")
 
     summary_path = output_dir / filename
     summary_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -452,312 +568,6 @@ def create_monthly_comparison_file(
         filename="previous_month_summary.txt",
         heading=heading,
     )
-
-
-def parse_int(value: str) -> Optional[int]:
-    """Convert a numeric string with separators to int."""
-    if value is None:
-        return None
-    digits = re.sub(r"[^0-9-]", "", value)
-    if not digits:
-        return None
-    try:
-        return int(digits)
-    except ValueError:
-        return None
-
-
-def extract_summary_stats_from_html(html: str) -> Dict[str, Optional[int]]:
-    """Extract summary statistics (files, pages, views) from the HTML."""
-    soup = BeautifulSoup(html, "html.parser")
-    stats: Dict[str, Optional[int]] = {
-        "files_viewed": None,
-        "files_used": None,
-        "pages_used": None,
-        "wikis": None,
-        "views": None,
-    }
-
-    files_pattern = re.compile(
-        r"([\d,]+)\s+files were viewed,\s*out of\s*([\d,]+)\s+used",
-        re.IGNORECASE,
-    )
-    pages_pattern = re.compile(
-        r"([\d,]+)\s+pages on\s+([\d,]+)\s+wikis", re.IGNORECASE
-    )
-    views_pattern = re.compile(r"([\d,]+)\s+file views", re.IGNORECASE)
-
-    for div in soup.find_all("div"):
-        text = div.get_text(" ", strip=True)
-        if not text:
-            continue
-
-        if stats["files_viewed"] is None:
-            match = files_pattern.search(text)
-            if match:
-                stats["files_viewed"] = parse_int(match.group(1))
-                stats["files_used"] = parse_int(match.group(2))
-
-        if stats["pages_used"] is None:
-            match = pages_pattern.search(text)
-            if match:
-                stats["pages_used"] = parse_int(match.group(1))
-                stats["wikis"] = parse_int(match.group(2))
-
-        if stats["views"] is None:
-            match = views_pattern.search(text)
-            if match:
-                stats["views"] = parse_int(match.group(1))
-
-    return stats
-
-
-def extract_file_entries_from_html(html: str) -> List[Dict[str, Any]]:
-    """Extract media entries (title, url, views) from the HTML table."""
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.select_one("#output table.table-striped")
-    files: List[Dict[str, Any]] = []
-
-    if not table:
-        return files
-
-    for row in table.find_all("tr"):
-        file_link = row.find(
-            "a", href=lambda href: href and "commons.wikimedia.org/wiki/File" in href
-        )
-        if not file_link:
-            continue
-
-        cells = row.find_all(["td", "th"])
-        views: Optional[int] = None
-        if len(cells) >= 3:
-            views = parse_int(cells[2].get_text(strip=True))
-
-        files.append(
-            {
-                "title": file_link.get_text(strip=True),
-                "url": file_link.get("href"),
-                "views": views,
-            }
-        )
-
-    return files
-
-
-def load_report_data(report_dir: Path) -> Optional[Dict[str, Any]]:
-    """Load stored metadata and derived data for a report directory."""
-    if not report_dir.is_dir():
-        return None
-
-    metadata_path = next(iter(sorted(report_dir.glob("metadata_*.json"))), None)
-    metadata: Dict[str, Any] = {}
-    if metadata_path and metadata_path.exists():
-        try:
-            with metadata_path.open("r", encoding="utf-8") as f:
-                metadata = json.load(f)
-        except (json.JSONDecodeError, OSError):
-            metadata = {}
-
-    html_path = next(iter(sorted(report_dir.glob("glamtools_results_*.html"))), None)
-    html_content = ""
-    if html_path and html_path.exists():
-        try:
-            html_content = html_path.read_text(encoding="utf-8")
-        except OSError:
-            html_content = ""
-
-    summary = metadata.get("summary")
-    files = metadata.get("files")
-
-    if html_content:
-        if not summary:
-            summary = extract_summary_stats_from_html(html_content)
-        if not files:
-            files = extract_file_entries_from_html(html_content)
-
-    timestamp = metadata.get("timestamp")
-    if not timestamp:
-        try:
-            timestamp = datetime.fromtimestamp(
-                (html_path or report_dir).stat().st_mtime, timezone.utc
-            ).isoformat()
-        except OSError:
-            timestamp = None
-
-    return {
-        "path": report_dir,
-        "metadata": metadata,
-        "summary": summary or {},
-        "files": files or [],
-        "timestamp": timestamp,
-    }
-
-
-def parse_timestamp(timestamp: Optional[str]) -> Optional[datetime]:
-    if not timestamp:
-        return None
-    try:
-        return datetime.fromisoformat(timestamp)
-    except ValueError:
-        try:
-            return datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
-        except ValueError:
-            return None
-
-
-def get_latest_report() -> Optional[Dict[str, Any]]:
-    """Return information about the most recent report directory."""
-    if not BASE_OUTPUT_DIR.exists():
-        return None
-
-    latest_report: Optional[Dict[str, Any]] = None
-    latest_timestamp: Optional[datetime] = None
-
-    for entry in BASE_OUTPUT_DIR.iterdir():
-        if not entry.is_dir():
-            continue
-
-        data = load_report_data(entry)
-        if not data:
-            continue
-
-        ts = parse_timestamp(data.get("timestamp"))
-        if ts is None:
-            try:
-                ts = datetime.fromtimestamp(entry.stat().st_mtime, timezone.utc)
-            except OSError:
-                ts = None
-
-        if ts is None:
-            continue
-
-        if latest_timestamp is None or ts > latest_timestamp:
-            latest_timestamp = ts
-            latest_report = data
-
-    return latest_report
-
-
-def format_diff(value: int) -> str:
-    if value > 0:
-        return f"[+{value}]"
-    if value < 0:
-        return f"[{value}]"
-    return "[0]"
-
-
-def compute_pages_diff_label(
-    current_summary: Dict[str, Any], previous_report: Optional[Dict[str, Any]]
-) -> str:
-    current_pages = current_summary.get("pages_used")
-    previous_pages = (
-        (previous_report or {}).get("summary", {}).get("pages_used")
-        if previous_report
-        else None
-    )
-
-    if current_pages is None or previous_pages is None:
-        return "[0]"
-
-    diff_value = int(current_pages) - int(previous_pages)
-    return format_diff(diff_value)
-
-
-def format_signed(value: int) -> str:
-    return f"+{value}" if value > 0 else str(value)
-
-
-def calculate_summary_differences(
-    current_summary: Dict[str, Any], previous_summary: Dict[str, Any]
-) -> Dict[str, int]:
-    diffs: Dict[str, int] = {}
-    for key in ("files_used", "pages_used", "views"):
-        current_value = current_summary.get(key)
-        previous_value = previous_summary.get(key)
-        if current_value is None or previous_value is None:
-            continue
-        diffs[key] = int(current_value) - int(previous_value)
-    return diffs
-
-
-def create_changes_summary_file(
-    output_dir: Path,
-    current_summary: Dict[str, Any],
-    previous_report: Dict[str, Any],
-    current_files: List[Dict[str, Any]],
-) -> None:
-    previous_summary = previous_report.get("summary", {})
-
-    differences = calculate_summary_differences(current_summary, previous_summary)
-    views_diff = differences.get("views")
-    views_diff_display = format_optional_difference(views_diff)
-
-    current_files_used = current_summary.get("files_used")
-    previous_files_used = previous_summary.get("files_used")
-
-    if current_files_used is None:
-        current_files_used = len(current_files)
-    if previous_files_used is None:
-        previous_files_used = len(previous_report.get("files", []))
-
-    files_diff = int(current_files_used) - int(previous_files_used)
-    pages_previous = previous_summary.get("pages_used")
-    pages_current = current_summary.get("pages_used")
-    if pages_previous is None:
-        pages_previous = 0
-    if pages_current is None:
-        pages_current = 0
-    pages_diff = int(pages_current) - int(pages_previous)
-    current_views_value = current_summary.get("views")
-    if current_views_value is None:
-        current_views_value = "unknown"
-
-    previous_files_by_url = {
-        item["url"]: item
-        for item in previous_report.get("files", [])
-        if item.get("url")
-    }
-    current_files_by_url = {
-        item["url"]: item for item in current_files if item.get("url")
-    }
-
-    added_urls = sorted(set(current_files_by_url) - set(previous_files_by_url))
-    removed_urls = sorted(set(previous_files_by_url) - set(current_files_by_url))
-
-    lines = [
-        f"Changes compared to previous report ({previous_report['path'].name}):",
-        f"- Media files used: {format_signed(files_diff)} (current total: {current_files_used})",
-        f"- Pages using media: {format_signed(pages_diff)} (current total: {current_summary.get('pages_used', 'unknown')})",
-        f"- File views: {views_diff_display} (current total: {current_views_value})",
-    ]
-
-    has_change = any(
-        [
-            files_diff != 0,
-            pages_diff != 0,
-            any(value for value in differences.values() if value),
-        ]
-    )
-
-    if not has_change:
-        lines.append("- No metric changes detected compared to the previous report.")
-
-    if files_diff != 0:
-        if added_urls:
-            lines.append("  Added media files:")
-            for url in added_urls:
-                item = current_files_by_url[url]
-                title = item.get("title") or url
-                lines.append(f"    - {title} ({url})")
-        if removed_urls:
-            lines.append("  Removed media files:")
-            for url in removed_urls:
-                item = previous_files_by_url[url]
-                title = item.get("title") or url
-                lines.append(f"    - {title} ({url})")
-
-    summary_path = output_dir / "changes_summary.txt"
-    summary_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def setup_driver(headless=True):
