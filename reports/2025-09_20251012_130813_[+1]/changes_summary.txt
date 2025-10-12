@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-09_20251012_030708_[0]):
+- Media files used: 0 (current total: 319)
+- Pages using media: +1 (current total: 938)
+- File views: 0 (current total: 841954)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Jona (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FJona) now uses Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945.jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945.jpg)
