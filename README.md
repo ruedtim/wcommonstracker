@@ -6,7 +6,7 @@ Dieses Repository überwacht täglich die Nutzung von Medien aus der Wikimedia C
 
 Das Skript nutzt Browser-Automation (Selenium) um https://glamtools.toolforge.org/glamorgan.html zu verwenden:
 - Automatisches Ausfüllen des Formulars (Kategorie, Depth, Jahr/Monat)
-- Warten auf vollständiges Laden der Ergebnisse (~1-2 Minuten)
+- Warten auf vollständiges Laden der Ergebnisse
 - Speichern der Ergebnisse als HTML, Screenshot und JSON
 
 Jeder Durchlauf erstellt einen eigenen timestamped Ordner unter `reports/YYYY-MM_timestamp/`.
