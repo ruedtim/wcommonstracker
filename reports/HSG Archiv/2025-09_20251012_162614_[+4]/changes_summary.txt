@@ -1,0 +1,9 @@
+Changes compared to previous report (2025-09_20251012_030708_[0]):
+- Media files used: 0 (current total: 319)
+- Pages using media: +4 (current total: 941)
+- File views: +9 (current total: 841963)
+  Pages that started using media:
+    - arzwiki: روبرت اورفيل اندرسون (https://arz.wikipedia.org/wiki/%D8%B1%D9%88%D8%A8%D8%B1%D8%AA_%D8%A7%D9%88%D8%B1%D9%81%D9%8A%D9%84_%D8%A7%D9%86%D8%AF%D8%B1%D8%B3%D9%88%D9%86) now uses 13. Internationales Management-Gespräch-Robert O. Anderson-HSGN 028-00547.jpg (https://commons.wikimedia.org/wiki/File%3A13._Internationales_Management-Gespr%C3%A4ch-Robert_O._Anderson-HSGN_028-00547.jpg)
+    - arzwiki: كونراد هاملر (https://arz.wikipedia.org/wiki/%D9%83%D9%88%D9%86%D8%B1%D8%A7%D8%AF_%D9%87%D8%A7%D9%85%D9%84%D8%B1) now uses 35. ISC-Symposium-Konrad Hummler, Noreena Hertz und Lord Griffiths of Fforestfach-HSGN 028-01796.JPG (https://commons.wikimedia.org/wiki/File%3A35._ISC-Symposium-Konrad_Hummler%2C_Noreena_Hertz_und_Lord_Griffiths_of_Fforestfach-HSGN_028-01796.JPG)
+    - arzwiki: يورجن فيتشن (https://arz.wikipedia.org/wiki/%D9%8A%D9%88%D8%B1%D8%AC%D9%86_%D9%81%D9%8A%D8%AA%D8%B4%D9%86) now uses 34. ISC-Symposium-Jürgen Fitschen-HSGN 028-01747.JPG (https://commons.wikimedia.org/wiki/File%3A34._ISC-Symposium-J%C3%BCrgen_Fitschen-HSGN_028-01747.JPG)
+    - dewiki: Liste der Biografien/Jona (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FJona) now uses Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945.jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945.jpg)
