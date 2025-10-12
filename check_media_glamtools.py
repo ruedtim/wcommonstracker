@@ -322,6 +322,16 @@ def calculate_summary_differences(
     return diffs
 
 
+def save_screenshot_at_top(driver: webdriver.Chrome, path: Path) -> None:
+    """Scroll to the top of the page before capturing a screenshot."""
+    try:
+        driver.execute_script("window.scrollTo(0, 0);")
+        time.sleep(0.5)
+    except Exception as exc:
+        print(f"Note: Could not scroll to top before screenshot: {exc}")
+    driver.save_screenshot(str(path))
+
+
 def write_comparison_summary(
     output_dir: Path,
     current_summary: Dict[str, Any],
@@ -330,14 +340,11 @@ def write_comparison_summary(
     *,
     filename: str,
     heading: str,
-    require_views_change: bool,
 ) -> Optional[Path]:
     previous_summary = previous_report.get("summary", {})
 
     differences = calculate_summary_differences(current_summary, previous_summary)
     views_diff = differences.get("views")
-    if require_views_change and (views_diff is None or views_diff == 0):
-        return None
 
     current_files_used = current_summary.get("files_used")
     if current_files_used is None:
@@ -417,7 +424,6 @@ def create_changes_summary_file(
         current_files,
         filename="changes_summary.txt",
         heading=heading,
-        require_views_change=True,
     )
 
 
@@ -439,7 +445,6 @@ def create_monthly_comparison_file(
         current_files,
         filename="previous_month_summary.txt",
         heading=heading,
-        require_views_change=False,
     )
 
 
@@ -898,7 +903,7 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
     print(f"Saved HTML: {html_file}")
 
     screenshot_file = output_dir / f"glamtools_screenshot_{timestamp}.png"
-    driver.save_screenshot(str(screenshot_file))
+    save_screenshot_at_top(driver, screenshot_file)
     print(f"Saved screenshot: {screenshot_file}")
 
     table_data = []
@@ -941,7 +946,7 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
     latest_html.write_text(page_source, encoding="utf-8")
 
     latest_screenshot = output_dir / "latest_screenshot.png"
-    driver.save_screenshot(str(latest_screenshot))
+    save_screenshot_at_top(driver, latest_screenshot)
 
     current_url = driver.current_url
     print(f"Current URL: {current_url}")
@@ -1019,7 +1024,7 @@ def main():
             BASE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
             error_screenshot = BASE_OUTPUT_DIR / f"error_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.png"
             try:
-                driver.save_screenshot(str(error_screenshot))
+                save_screenshot_at_top(driver, error_screenshot)
                 print(f"Error screenshot saved: {error_screenshot}")
             except:
                 pass
