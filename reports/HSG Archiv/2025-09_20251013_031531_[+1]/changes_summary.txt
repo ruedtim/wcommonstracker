@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-09_20251012_162614_[+4]):
+- Media files used: 0 (current total: 319)
+- Pages using media: +1 (current total: 942)
+- File views: +13 (current total: 841976)
+  Pages that started using media:
+    - plwikiquote: Allan Bloom (https://pl.wikiquote.org/wiki/Allan_Bloom) now uses 19. Internationales Management-Gespräch-Allan Bloom-HSGN 028-00796.jpg (https://commons.wikimedia.org/wiki/File%3A19._Internationales_Management-Gespr%C3%A4ch-Allan_Bloom-HSGN_028-00796.jpg)
