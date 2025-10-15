@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-09_20251014_030627_[0]):
+- Media files used: 0 (current total: 319)
+- Pages using media: +1 (current total: 943)
+- File views: 0 (current total: 841976)
+  Pages that started using media:
+    - liwiki: Lies vaan Nobelprieswinners (economie) (https://li.wikipedia.org/wiki/Lies_vaan_Nobelprieswinners_(economie)) now uses Robert John Aumann close-up (cropped).JPG (https://commons.wikimedia.org/wiki/File%3ARobert_John_Aumann_close-up_(cropped).JPG)
