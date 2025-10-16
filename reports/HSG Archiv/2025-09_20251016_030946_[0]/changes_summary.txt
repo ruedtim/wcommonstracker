@@ -1,0 +1,8 @@
+Changes compared to previous report (2025-09_20251015_030959_[+1]):
+- Media files used: +1 (current total: 320)
+- Pages using media: 0 (current total: 943)
+- File views: -23 (current total: 841953)
+  Pages that started using media:
+    - cawiki: Espionatge industrial (https://ca.wikipedia.org/wiki/Espionatge_industrial) now uses 23. Internationales Management-Gespräch-José Ignacio López de Arriortúa-HSGN 028-00946.jpg (https://commons.wikimedia.org/wiki/File%3A23._Internationales_Management-Gespr%C3%A4ch-Jos%C3%A9_Ignacio_L%C3%B3pez_de_Arriort%C3%BAa-HSGN_028-00946.jpg)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Reu (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FReu) stopped using 21. Internationales Management-Gespräch-Edzard Reuter-HSGN 028-00882.jpg (https://commons.wikimedia.org/wiki/File%3A21._Internationales_Management-Gespr%C3%A4ch-Edzard_Reuter-HSGN_028-00882.jpg)
