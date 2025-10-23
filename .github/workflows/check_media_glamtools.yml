@@ -51,10 +51,50 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add reports/
+        TOTAL_CHANGE=$(git diff --cached --name-only --diff-filter=A -z -- 'reports/metadata_*.json' | python - <<'PYCODE'
+import json
+import sys
+
+paths = sys.stdin.buffer.read().split(b"\0")
+total = 0
+
+for raw_path in paths:
+    if not raw_path:
+        continue
+    path = raw_path.decode()
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception:
+        continue
+
+    value = data.get("diff_label")
+    if value is None:
+        summary = data.get("summary_differences")
+        if isinstance(summary, dict):
+            value = summary.get("pages_used")
+
+    if isinstance(value, str):
+        value = value.strip()
+
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        try:
+            number = int(float(value))
+        except (TypeError, ValueError):
+            continue
+
+    total += abs(number)
+
+print(total)
+PYCODE
+)
+        TOTAL_CHANGE=${TOTAL_CHANGE:-0}
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Update media usage report - $(date +'%Y-%m-%d')"
+          git commit -m "Update media usage report [${TOTAL_CHANGE}] - $(date +'%Y-%m-%d')"
         fi
         git pull --rebase origin main
         git push origin HEAD:main
