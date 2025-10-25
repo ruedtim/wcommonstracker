@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import TimeoutException
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -23,12 +24,18 @@ GLAMTOOLS_URL = "https://glamtools.toolforge.org/glamorgan.html"
 DEPTH = "12"
 # Use previous month to ensure data is available
 
+DEFAULT_MAX_WAIT_SECONDS = 60
+DEFAULT_INITIAL_WAIT_SECONDS = 2
+STABILIZATION_CHECKS = 3
+
 
 @dataclass(frozen=True)
 class CategoryConfig:
     name: str
     report_subdir: str
     label: str
+    max_wait_seconds: int = DEFAULT_MAX_WAIT_SECONDS
+    initial_wait_seconds: int = DEFAULT_INITIAL_WAIT_SECONDS
 
 
 REPORTS_ROOT = Path("reports")
@@ -37,16 +44,22 @@ CATEGORY_CONFIGS: List[CategoryConfig] = [
         name="Media supplied by Universitätsarchiv St. Gallen",
         report_subdir="HSG Archiv",
         label="HSG",
+        max_wait_seconds=90,
+        initial_wait_seconds=3,
     ),
     CategoryConfig(
         name="Rahn Collection",
         report_subdir="Rahn Collection",
         label="Rahn",
+        max_wait_seconds=30,
+        initial_wait_seconds=1,
     ),
     CategoryConfig(
         name="Breitinger Collection",
         report_subdir="Breitinger Collection",
         label="Breitinger",
+        max_wait_seconds=30,
+        initial_wait_seconds=1,
     ),
 ]
 
@@ -67,7 +80,6 @@ MONTH_FOR_FORM = str(target_month)
 IS_FIRST_DAY_OF_MONTH = current_date.day == 1
 PREVIOUS_DATASET_YEAR, PREVIOUS_DATASET_MONTH = previous_month(target_year, target_month)
 BASE_OUTPUT_DIR = REPORTS_ROOT / CATEGORY_CONFIGS[0].report_subdir
-TIMEOUT = 60  # 1 minute max wait time (GLAM Tools can take time to load)
 
 
 def parse_int(value: str) -> Optional[int]:
@@ -680,62 +692,74 @@ def fill_form_and_submit(driver):
     print("Form submitted, waiting for results...")
 
 
-def wait_for_results(driver):
-    """Wait for the results to load"""
-    print("Waiting for results to load (this can take 1-2 minutes)...")
-    
-    # Initial wait for JavaScript to process and API calls to start
-    time.sleep(10)
-    
-    # Wait for results to be fully populated
-    max_wait = TIMEOUT
+def wait_for_results(
+    driver,
+    *,
+    max_wait_seconds: int,
+    initial_wait_seconds: int,
+) -> None:
+    """Wait for the results to load with a configurable timeout."""
+    print(
+        f"Waiting for results to load (timeout {max_wait_seconds}s, initial wait {initial_wait_seconds}s)..."
+    )
+
+    if initial_wait_seconds:
+        time.sleep(initial_wait_seconds)
+
     start_time = time.time()
+    deadline = start_time + max_wait_seconds
     last_content_length = 0
     stable_count = 0
-    found_results = False
-    
-    while time.time() - start_time < max_wait:
-        try:
-            # Get current page content
-            current_content = driver.page_source
-            current_length = len(current_content)
-            elapsed = int(time.time() - start_time)
-            
-            # Look for key result indicators
-            has_category_msg = "files in category tree" in current_content.lower()
-            has_table = "<table class='table table-striped'>" in current_content or "<table class=\"table table-striped\">" in current_content
-            has_views_data = "file views in" in current_content.lower()
-            
-            if has_category_msg and not found_results:
-                print(f"✓ Found 'files in category tree' message ({elapsed}s)")
-                found_results = True
-            
-            # Check if data is complete (has table with views)
-            if has_table and has_views_data:
+    found_table = False
+
+    while time.time() < deadline:
+        current_content = driver.page_source
+        current_length = len(current_content)
+        elapsed = int(time.time() - start_time)
+
+        has_category_msg = "files in category tree" in current_content.lower()
+        has_views_data = "file views in" in current_content.lower()
+        has_table = (
+            "<table class='table table-striped'>" in current_content
+            or '<table class="table table-striped">' in current_content
+        )
+
+        if has_category_msg and not found_table:
+            print(f"✓ Found 'files in category tree' message ({elapsed}s)")
+
+        if has_category_msg and has_views_data and has_table:
+            if not found_table:
                 print(f"✓ Found table with view data ({elapsed}s)")
-                # Wait for content to stabilize
-                if current_length == last_content_length:
-                    stable_count += 1
-                    if stable_count >= 5:  # Content stable for 5 checks (5 seconds)
-                        print(f"✓ Content stabilized ({elapsed}s)")
-                        time.sleep(3)  # Final buffer
-                        break
-                else:
-                    stable_count = 0
-                    last_content_length = current_length
-                    if elapsed % 10 == 0:  # Log every 10 seconds
-                        print(f"  Still loading... ({current_length} bytes, {elapsed}s)")
-            elif found_results:
-                if elapsed % 10 == 0:
-                    print(f"  Loading view data... ({elapsed}s)")
-                
-        except Exception as e:
-            print(f"  Checking... ({int(time.time() - start_time)}s) - {e}")
-        
+                found_table = True
+
+            if current_length == last_content_length:
+                stable_count += 1
+                if stable_count >= STABILIZATION_CHECKS:
+                    print(f"✓ Content stabilized ({elapsed}s)")
+                    return
+            else:
+                stable_count = 0
+                last_content_length = current_length
+                if elapsed % 8 == 0:
+                    print(f"  Still loading... ({current_length} bytes, {elapsed}s)")
+        else:
+            stable_count = 0
+            last_content_length = current_length
+            if elapsed % 5 == 0:
+                print(f"  Waiting for table... ({elapsed}s)")
+
         time.sleep(1)
-    
-    elapsed_final = int(time.time() - start_time)
-    print(f"Results loading complete after {elapsed_final} seconds!")
+
+    if found_table:
+        total_elapsed = int(time.time() - start_time)
+        print(
+            f"Proceeding without full stabilization after {total_elapsed}s; content may still be updating."
+        )
+        return
+
+    raise TimeoutException(
+        f"Timed out after {max_wait_seconds}s waiting for GLAM Tools results."
+    )
 
 
 def expand_full_results(driver):
@@ -889,7 +913,9 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
     return output_dir, total_usage_changes
 
 
-def run_category(config: CategoryConfig) -> Tuple[CategoryConfig, Path, int]:
+def run_category(
+    config: CategoryConfig, driver: webdriver.Chrome
+) -> Tuple[CategoryConfig, Path, int]:
     """Execute the GLAM Tools check for a single category."""
 
     global CATEGORY, BASE_OUTPUT_DIR
@@ -902,17 +928,19 @@ def run_category(config: CategoryConfig) -> Tuple[CategoryConfig, Path, int]:
     print(f"Processing category: {CATEGORY}")
     print(separator)
 
-    driver = None
     try:
         print("Starting GLAM Tools browser automation...")
         print(f"Category: {CATEGORY}")
         print(f"Depth: {DEPTH}")
         print(f"Year/Month: {YEAR}/{MONTH}\n")
 
-        driver = setup_driver(headless=True)
         previous_report = get_latest_report()
         fill_form_and_submit(driver)
-        wait_for_results(driver)
+        wait_for_results(
+            driver,
+            max_wait_seconds=config.max_wait_seconds,
+            initial_wait_seconds=config.initial_wait_seconds,
+        )
         expand_full_results(driver)
         output_dir, total_usage_changes = save_results(driver, previous_report)
 
@@ -934,9 +962,10 @@ def run_category(config: CategoryConfig) -> Tuple[CategoryConfig, Path, int]:
                 pass
         raise
     finally:
-        if driver:
-            driver.quit()
-            print("Browser closed")
+        try:
+            driver.delete_all_cookies()
+        except Exception:
+            pass
 
     return config, output_dir, total_usage_changes
 
@@ -947,17 +976,25 @@ def main():
     total_changes_all = 0
     per_category: List[Dict[str, Any]] = []
 
-    for config in CATEGORY_CONFIGS:
-        cat_config, output_dir, changes = run_category(config)
-        per_category.append(
-            {
-                "name": cat_config.name,
-                "label": cat_config.label,
-                "report_directory": str(output_dir),
-                "changes": int(changes),
-            }
-        )
-        total_changes_all += int(changes)
+    driver: Optional[webdriver.Chrome] = None
+    try:
+        driver = setup_driver(headless=True)
+
+        for config in CATEGORY_CONFIGS:
+            cat_config, output_dir, changes = run_category(config, driver)
+            per_category.append(
+                {
+                    "name": cat_config.name,
+                    "label": cat_config.label,
+                    "report_directory": str(output_dir),
+                    "changes": int(changes),
+                }
+            )
+            total_changes_all += int(changes)
+    finally:
+        if driver:
+            driver.quit()
+            print("Browser closed")
 
     # Persist a run-level summary for the workflow to use in commit messages
     REPORTS_ROOT.mkdir(parents=True, exist_ok=True)
