@@ -48,10 +48,13 @@ jobs:
     
     - name: Commit and push reports
       run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add reports/
-        TOTAL_CHANGE=$(git diff --cached --name-only --diff-filter=A -z -- 'reports/metadata_*.json' | python - <<'PYCODE'
+#!/usr/bin/env bash
+set -eo pipefail
+
+git config --local user.email "github-actions[bot]@users.noreply.github.com"
+git config --local user.name "github-actions[bot]"
+git add reports/
+TOTAL_CHANGE=$(git diff --cached --name-only --diff-filter=A -z -- 'reports/metadata_*.json' | python - <<'PYCODE'
 import json
 import sys
 
@@ -90,14 +93,14 @@ for raw_path in paths:
 print(total)
 PYCODE
 )
-        TOTAL_CHANGE=${TOTAL_CHANGE:-0}
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "Update media usage report [${TOTAL_CHANGE}] - $(date +'%Y-%m-%d')"
-        fi
-        git pull --rebase origin main
-        git push origin HEAD:main
+TOTAL_CHANGE=${TOTAL_CHANGE:-0}
+if git diff --staged --quiet; then
+  echo "No changes to commit"
+else
+  git commit -m "Update media usage report [${TOTAL_CHANGE}] - $(date +'%Y-%m-%d')"
+fi
+git pull --rebase origin main
+git push origin HEAD:main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
