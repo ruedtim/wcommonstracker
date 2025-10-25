@@ -35,7 +35,7 @@ jobs:
         chrome-version: stable
     
     - name: Set up ChromeDriver
-      uses: browser-actions/setup-chromedriver@v1
+      uses: nanasess/setup-chromedriver@v2
     
     - name: Install Python dependencies
       run: |
