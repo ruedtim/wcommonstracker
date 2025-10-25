@@ -1,0 +1,9 @@
+Changes compared to previous report (2025-09_20251022_031755_[0]):
+- Media files used: 0 (current total: 320)
+- Pages using media: +1 (current total: 945)
+- File views: +1199 (current total: 843253)
+  Pages that started using media:
+    - plwiki: Ministrowie skarbu i ministrowie finansów Polski (https://pl.wikipedia.org/wiki/Ministrowie_skarbu_i_ministrowie_finans%C3%B3w_Polski) now uses Leszek Balcerowicz 1990.jpg (https://commons.wikimedia.org/wiki/File%3ALeszek_Balcerowicz_1990.jpg)
+    - vowiki: Maria Schaumayer (https://vo.wikipedia.org/wiki/Maria_Schaumayer) now uses 21. Internationales Management-Gespräch-Maria Schaumayer-HSGN 028-00883.jpg (https://commons.wikimedia.org/wiki/File%3A21._Internationales_Management-Gespr%C3%A4ch-Maria_Schaumayer-HSGN_028-00883.jpg)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Roh (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FRoh) stopped using 34. ISC-Symposium-Marcel Rohner-HSGN 028-01710.JPG (https://commons.wikimedia.org/wiki/File%3A34._ISC-Symposium-Marcel_Rohner-HSGN_028-01710.JPG)
