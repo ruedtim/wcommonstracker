@@ -45,6 +45,11 @@ jobs:
     - name: Run GLAM Tools check
       run: |
         python check_media_glamtools.py
+
+    - name: Install jq (for parsing run summary)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y jq
     
     - name: Commit and push reports
       run: |
@@ -54,7 +59,17 @@ jobs:
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Update media usage report - $(date +'%Y-%m-%d')"
+          TOTAL_CHANGES=0
+          CATEGORY_SUMMARY=""
+          if [ -f reports/run_summary.json ]; then
+            TOTAL_CHANGES=$(jq -r '.total_changes // 0' reports/run_summary.json || echo 0)
+            CATEGORY_SUMMARY=$(jq -r '[.categories[] | "\(.label):\(.changes)"] | join(", ")' reports/run_summary.json || echo "")
+          fi
+          if [ -n "$CATEGORY_SUMMARY" ]; then
+            git commit -m "Update media usage report (+${TOTAL_CHANGES} changes) - $(date +'%Y-%m-%d') [$CATEGORY_SUMMARY]"
+          else
+            git commit -m "Update media usage report (+${TOTAL_CHANGES} changes) - $(date +'%Y-%m-%d')"
+          fi
         fi
         git pull --rebase origin main
         git push origin HEAD:main

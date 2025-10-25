@@ -28,6 +28,7 @@ DEPTH = "12"
 class CategoryConfig:
     name: str
     report_subdir: str
+    label: str
 
 
 REPORTS_ROOT = Path("reports")
@@ -35,10 +36,17 @@ CATEGORY_CONFIGS: List[CategoryConfig] = [
     CategoryConfig(
         name="Media supplied by Universitätsarchiv St. Gallen",
         report_subdir="HSG Archiv",
+        label="HSG",
     ),
-    CategoryConfig(name="Rahn Collection", report_subdir="Rahn Collection"),
     CategoryConfig(
-        name="Breitinger Collection", report_subdir="Breitinger Collection"
+        name="Rahn Collection",
+        report_subdir="Rahn Collection",
+        label="Rahn",
+    ),
+    CategoryConfig(
+        name="Breitinger Collection",
+        report_subdir="Breitinger Collection",
+        label="Breitinger",
     ),
 ]
 
@@ -380,6 +388,67 @@ def calculate_summary_differences(
     return diffs
 
 
+def build_usage_lookup_from_files(
+    files: List[Dict[str, Any]],
+) -> Dict[Tuple[str, str, str, str], Dict[str, Any]]:
+    """Create a lookup of page-usage entries for quick diffing.
+
+    Keyed by (wiki, page_title, page_url, media_url) to uniquely identify a usage.
+    Values contain display-friendly fields.
+    """
+    lookup: Dict[Tuple[str, str, str, str], Dict[str, Any]] = {}
+    for item in files or []:
+        media_url = (item or {}).get("url") or ""
+        media_title = (item or {}).get("title") or media_url
+        for usage in (item or {}).get("usages") or []:
+            wiki = (usage.get("wiki") or "").strip()
+            page_title = (
+                usage.get("title")
+                or usage.get("page_title")
+                or ""
+            ).strip()
+            page_url = (usage.get("url") or usage.get("page_url") or "").strip()
+            if not wiki and not page_title:
+                # Skip empty rows
+                continue
+            key = (wiki, page_title, page_url, media_url)
+            lookup[key] = {
+                "wiki": wiki or "unknown",
+                "page_title": page_title or "unknown",
+                "page_url": page_url,
+                "media_title": media_title,
+                "media_url": media_url,
+            }
+    return lookup
+
+
+def compute_usage_change_details(
+    previous_files: List[Dict[str, Any]],
+    current_files: List[Dict[str, Any]],
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """Compute detailed page-usage changes between two file lists.
+
+    Returns (added_usage_details, removed_usage_details).
+    A "usage" is a specific wiki page using a specific media file.
+    """
+    prev_lookup = build_usage_lookup_from_files(previous_files)
+    curr_lookup = build_usage_lookup_from_files(current_files)
+
+    added_keys = set(curr_lookup) - set(prev_lookup)
+    removed_keys = set(prev_lookup) - set(curr_lookup)
+
+    def sort_usage(details: Dict[str, Any]) -> Tuple[str, str, str]:
+        return (
+            details.get("wiki") or "",
+            details.get("page_title") or "",
+            details.get("media_title") or "",
+        )
+
+    added = sorted((curr_lookup[k] for k in added_keys), key=sort_usage)
+    removed = sorted((prev_lookup[k] for k in removed_keys), key=sort_usage)
+    return added, removed
+
+
 def save_screenshot_at_top(driver: webdriver.Chrome, path: Path) -> None:
     """Scroll to the top of the page before capturing a screenshot."""
     try:
@@ -441,55 +510,19 @@ def write_comparison_summary(
     current_pages_display = current_pages_total if current_pages_total is not None else "unknown"
 
     previous_files_by_url = {
-        item["url"]: item
-        for item in previous_report.get("files", [])
+        item.get("url"): item
+        for item in (previous_report.get("files", []) or [])
         if item.get("url")
     }
     current_files_by_url = {
-        item["url"]: item for item in current_files if item.get("url")
+        item.get("url"): item for item in (current_files or []) if item.get("url")
     }
 
     added_urls = sorted(set(current_files_by_url) - set(previous_files_by_url))
     removed_urls = sorted(set(previous_files_by_url) - set(current_files_by_url))
 
-    def build_usage_lookup(files_by_url: Dict[str, Dict[str, Any]]) -> Dict[Tuple[str, str, str, str], Dict[str, Any]]:
-        lookup: Dict[Tuple[str, str, str, str], Dict[str, Any]] = {}
-        for media_url, item in files_by_url.items():
-            media_title = item.get("title") or media_url
-            for usage in item.get("usages") or []:
-                wiki = (usage.get("wiki") or "").strip()
-                page_title = (usage.get("title") or usage.get("page_title") or "").strip()
-                page_url = (usage.get("url") or usage.get("page_url") or "").strip()
-                if not wiki and not page_title:
-                    continue
-                key = (wiki, page_title, page_url, media_url)
-                lookup[key] = {
-                    "wiki": wiki or "unknown",
-                    "page_title": page_title or "unknown",
-                    "page_url": page_url,
-                    "media_title": media_title,
-                    "media_url": media_url,
-                }
-        return lookup
-
-    previous_usage_lookup = build_usage_lookup(previous_files_by_url)
-    current_usage_lookup = build_usage_lookup(current_files_by_url)
-
-    added_usage_keys = set(current_usage_lookup) - set(previous_usage_lookup)
-    removed_usage_keys = set(previous_usage_lookup) - set(current_usage_lookup)
-
-    def sort_usage(details: Dict[str, Any]) -> Tuple[str, str, str]:
-        return (
-            details.get("wiki") or "",
-            details.get("page_title") or "",
-            details.get("media_title") or "",
-        )
-
-    added_usage_details = sorted(
-        (current_usage_lookup[key] for key in added_usage_keys), key=sort_usage
-    )
-    removed_usage_details = sorted(
-        (previous_usage_lookup[key] for key in removed_usage_keys), key=sort_usage
+    added_usage_details, removed_usage_details = compute_usage_change_details(
+        list(previous_files_by_url.values()), list(current_files_by_url.values())
     )
 
     page_usage_changes_present = bool(added_usage_details or removed_usage_details)
@@ -740,7 +773,13 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
     summary_stats = extract_summary_stats_from_html(page_source)
     file_entries = extract_file_entries_from_html(page_source)
 
-    diff_label = compute_pages_diff_label(summary_stats, previous_report)
+    # Compute sum of page-usage changes (added + removed) instead of net page delta
+    prev_files_for_diff = (previous_report or {}).get("files", []) if previous_report else []
+    added_usage_details, removed_usage_details = compute_usage_change_details(
+        prev_files_for_diff, file_entries
+    )
+    total_usage_changes = len(added_usage_details) + len(removed_usage_details)
+    diff_label = f"[{total_usage_changes}]"
     final_dir_name = f"{base_dir_name}_{diff_label}"
     output_dir = BASE_OUTPUT_DIR / final_dir_name
     output_dir.mkdir(parents=True, exist_ok=False)
@@ -817,6 +856,11 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
         else None,
         "diff_label": diff_label,
         "summary_differences": summary_differences,
+        "changes": {
+            "added_usage": len(added_usage_details),
+            "removed_usage": len(removed_usage_details),
+            "total_changes": total_usage_changes,
+        },
     }
 
     metadata_file = output_dir / f"metadata_{timestamp}.json"
@@ -842,10 +886,10 @@ def save_results(driver, previous_report: Optional[Dict[str, Any]]):
                 "No stored report found for the previous dataset month; skipping monthly summary."
             )
 
-    return output_dir
+    return output_dir, total_usage_changes
 
 
-def run_category(config: CategoryConfig) -> None:
+def run_category(config: CategoryConfig) -> Tuple[CategoryConfig, Path, int]:
     """Execute the GLAM Tools check for a single category."""
 
     global CATEGORY, BASE_OUTPUT_DIR
@@ -870,10 +914,11 @@ def run_category(config: CategoryConfig) -> None:
         fill_form_and_submit(driver)
         wait_for_results(driver)
         expand_full_results(driver)
-        output_dir = save_results(driver, previous_report)
+        output_dir, total_usage_changes = save_results(driver, previous_report)
 
         print(f"\n✓ Process completed successfully for {CATEGORY}!")
         print(f"Results saved to {output_dir}/")
+        print(f"Total page-usage changes in this run: {total_usage_changes}")
 
     except Exception as e:
         print(f"\n✗ Error occurred while processing {CATEGORY}: {e}")
@@ -893,11 +938,45 @@ def run_category(config: CategoryConfig) -> None:
             driver.quit()
             print("Browser closed")
 
+    return config, output_dir, total_usage_changes
+
 
 def main():
     print("Starting GLAM Tools browser automation for configured categories...")
+    run_timestamp = datetime.now(timezone.utc).isoformat()
+    total_changes_all = 0
+    per_category: List[Dict[str, Any]] = []
+
     for config in CATEGORY_CONFIGS:
-        run_category(config)
+        cat_config, output_dir, changes = run_category(config)
+        per_category.append(
+            {
+                "name": cat_config.name,
+                "label": cat_config.label,
+                "report_directory": str(output_dir),
+                "changes": int(changes),
+            }
+        )
+        total_changes_all += int(changes)
+
+    # Persist a run-level summary for the workflow to use in commit messages
+    REPORTS_ROOT.mkdir(parents=True, exist_ok=True)
+    run_summary_path = REPORTS_ROOT / "run_summary.json"
+    run_summary_path.write_text(
+        json.dumps(
+            {
+                "timestamp": run_timestamp,
+                "total_changes": total_changes_all,
+                "categories": per_category,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    print(
+        f"Saved run summary to {run_summary_path} (total changes across all categories: {total_changes_all})"
+    )
 
 
 if __name__ == "__main__":
