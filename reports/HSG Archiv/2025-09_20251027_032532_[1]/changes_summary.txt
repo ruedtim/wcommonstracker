@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-09_20251026_031524_[0]):
+- Media files used: 0 (current total: 320)
+- Pages using media: +1 (current total: 946)
+- File views: +3 (current total: 843256)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Lim (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FLim) now uses 35. ISC-Symposium-Thomas Limberger-HSGN 028-01797.JPG (https://commons.wikimedia.org/wiki/File%3A35._ISC-Symposium-Thomas_Limberger-HSGN_028-01797.JPG)
