@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-09_20251027_032532_[1]):
+- Media files used: 0 (current total: 320)
+- Pages using media: +1 (current total: 947)
+- File views: 0 (current total: 843256)
+  Pages that started using media:
+    - eswiki: Bengt Dennis (https://es.wikipedia.org/wiki/Bengt_Dennis) now uses 22. Internationales Management-Gespräch-Bengt Dennis-HSGN 028-00919.jpg (https://commons.wikimedia.org/wiki/File%3A22._Internationales_Management-Gespr%C3%A4ch-Bengt_Dennis-HSGN_028-00919.jpg)
