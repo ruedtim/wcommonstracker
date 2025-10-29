@@ -1,0 +1,7 @@
+Changes compared to previous report (2025-09_20251028_031339_[1]):
+- Media files used: 0 (current total: 320)
+- Pages using media: +2 (current total: 949)
+- File views: +176 (current total: 843432)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Roh (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FRoh) now uses 34. ISC-Symposium-Marcel Rohner-HSGN 028-01710.JPG (https://commons.wikimedia.org/wiki/File%3A34._ISC-Symposium-Marcel_Rohner-HSGN_028-01710.JPG)
+    - nlwiki: Lijst van presidenten van Ierland (https://nl.wikipedia.org/wiki/Lijst_van_presidenten_van_Ierland) now uses Mary Robinson 1994 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AMary_Robinson_1994_(cropped).jpg)
