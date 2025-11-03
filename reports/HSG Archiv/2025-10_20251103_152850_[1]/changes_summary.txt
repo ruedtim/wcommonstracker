@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251102_110844_[965]):
+- Media files used: 0 (current total: 321)
+- Pages using media: +1 (current total: 949)
+- File views: 0 (current total: 934093)
+  Pages that started using media:
+    - kkwiki: Мэри Робинсон (https://kk.wikipedia.org/wiki/%D0%9C%D1%8D%D1%80%D0%B8_%D0%A0%D0%BE%D0%B1%D0%B8%D0%BD%D1%81%D0%BE%D0%BD) now uses 24. Internationales Management-Gespräch 1994-Mary Robinson-HSGH 022-000751-07.jpg (https://commons.wikimedia.org/wiki/File%3A24._Internationales_Management-Gespr%C3%A4ch_1994-Mary_Robinson-HSGH_022-000751-07.jpg)
