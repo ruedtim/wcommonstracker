@@ -24,9 +24,9 @@ GLAMTOOLS_URL = "https://glamtools.toolforge.org/glamorgan.html"
 DEPTH = "12"
 # Use previous month to ensure data is available
 
-DEFAULT_MAX_WAIT_SECONDS = 60
-DEFAULT_INITIAL_WAIT_SECONDS = 2
-STABILIZATION_CHECKS = 3
+DEFAULT_MAX_WAIT_SECONDS = 70
+DEFAULT_INITIAL_WAIT_SECONDS = 5
+STABILIZATION_CHECKS = 5
 
 
 @dataclass(frozen=True)
@@ -45,21 +45,21 @@ CATEGORY_CONFIGS: List[CategoryConfig] = [
         report_subdir="HSG Archiv",
         label="HSG",
         max_wait_seconds=90,
-        initial_wait_seconds=3,
+        initial_wait_seconds=5,
     ),
     CategoryConfig(
         name="Rahn Collection",
         report_subdir="Rahn Collection",
         label="Rahn",
-        max_wait_seconds=30,
-        initial_wait_seconds=1,
+        max_wait_seconds=40,
+        initial_wait_seconds=4,
     ),
     CategoryConfig(
         name="Breitinger Collection",
         report_subdir="Breitinger Collection",
         label="Breitinger",
-        max_wait_seconds=30,
-        initial_wait_seconds=1,
+        max_wait_seconds=40,
+        initial_wait_seconds=4,
     ),
 ]
 
