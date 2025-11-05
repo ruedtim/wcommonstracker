@@ -1,0 +1,26 @@
+{
+  "category": "Rahn Collection",
+  "depth": "12",
+  "year": "2025",
+  "month": "10",
+  "timestamp": "2025-11-05T03:18:11.892381+00:00",
+  "url": "https://glamtools.toolforge.org/glamorgan.html",
+  "page_title": "GLAMorgan",
+  "summary": {
+    "files_viewed": null,
+    "files_used": null,
+    "pages_used": null,
+    "wikis": null,
+    "views": null
+  },
+  "files": [],
+  "report_directory": "2025-10_20251105_031810_[10]",
+  "previous_report_directory": "2025-10_20251104_031947_[0]",
+  "diff_label": "[10]",
+  "summary_differences": {},
+  "changes": {
+    "added_usage": 0,
+    "removed_usage": 10,
+    "total_changes": 10
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "category": "Breitinger Collection",
+  "depth": "12",
+  "year": "2025",
+  "month": "10",
+  "timestamp": "2025-11-05T03:18:58.134516+00:00",
+  "url": "https://glamtools.toolforge.org/glamorgan.html",
+  "page_title": "GLAMorgan",
+  "summary": {
+    "files_viewed": null,
+    "files_used": null,
+    "pages_used": null,
+    "wikis": null,
+    "views": null
+  },
+  "files": [],
+  "report_directory": "2025-10_20251105_031856_[13]",
+  "previous_report_directory": "2025-10_20251104_032236_[0]",
+  "diff_label": "[13]",
+  "summary_differences": {},
+  "changes": {
+    "added_usage": 0,
+    "removed_usage": 13,
+    "total_changes": 13
+  }
+}
