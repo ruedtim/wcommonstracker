@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251104_031638_[0]):
+- Media files used: +1 (current total: 322)
+- Pages using media: +1 (current total: 950)
+- File views: +212 (current total: 934305)
+  Pages that started using media:
+    - ptwiki: Relação de poder (https://pt.wikipedia.org/wiki/Rela%C3%A7%C3%A3o_de_poder) now uses 21. Internationales Management-Gespräch-Henry Mintzberg und Cornelio Sommaruga-HSGN 028-00875.jpg (https://commons.wikimedia.org/wiki/File%3A21._Internationales_Management-Gespr%C3%A4ch-Henry_Mintzberg_und_Cornelio_Sommaruga-HSGN_028-00875.jpg)
