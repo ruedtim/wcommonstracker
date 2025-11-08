@@ -1,0 +1,11 @@
+Changes compared to previous report (2025-10_20251107_031704_[0]):
+- Media files used: +1 (current total: 323)
+- Pages using media: +3 (current total: 953)
+- File views: +639 (current total: 934944)
+  Added media files:
+    - 24. Internationales Management-Gespräch-Louis Schweitzer-HSGN 028-01002 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A24._Internationales_Management-Gespr%C3%A4ch-Louis_Schweitzer-HSGN_028-01002_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Jaco (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FJaco) now uses 31. ISC-Symposium-Klaus J. Jacobs-HSGN 028-01550.jpg (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Klaus_J._Jacobs-HSGN_028-01550.jpg)
+    - enwiki: Louis Schweitzer (businessman) (https://en.wikipedia.org/wiki/Louis_Schweitzer_(businessman)) now uses 24. Internationales Management-Gespräch-Louis Schweitzer-HSGN 028-01002 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A24._Internationales_Management-Gespr%C3%A4ch-Louis_Schweitzer-HSGN_028-01002_(cropped).jpg)
+    - eswiki: Universidad de San Galo (https://es.wikipedia.org/wiki/Universidad_de_San_Galo) now uses HSG Logo EN RGB.svg (https://commons.wikimedia.org/wiki/File%3AHSG_Logo_EN_RGB.svg)
+    - iswiki: Niklas Luhmann (https://is.wikipedia.org/wiki/Niklas_Luhmann) now uses HSGH 022-000941 Niklas Luhmann (cropped).png (https://commons.wikimedia.org/wiki/File%3AHSGH_022-000941_Niklas_Luhmann_(cropped).png)
