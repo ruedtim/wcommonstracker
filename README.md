@@ -1,6 +1,6 @@
 # Wikimedia Commons Media Usage Tracker
 
-Dieses Repository überwacht täglich die Nutzung mehrerer Wikimedia-Commons-Kategorien für den GLAM-Bereich der Universität St. Gallen.
+Dieses Repository überwacht täglich die Nutzung mehrerer Wikimedia-Commons-Kategorien.
 
 Aktuell konfigurierte Kategorien (`check_media_glamtools.py` → `CATEGORY_CONFIGS`):
 
