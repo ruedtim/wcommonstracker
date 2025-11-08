@@ -61,6 +61,13 @@ CATEGORY_CONFIGS: List[CategoryConfig] = [
         max_wait_seconds=40,
         initial_wait_seconds=4,
     ),
+    CategoryConfig(
+        name="Steinfels Collection",
+        report_subdir="Steinfels Collection",
+        label="Steinfels",
+        max_wait_seconds=40,
+        initial_wait_seconds=4,
+    ),
 ]
 
 CATEGORY = CATEGORY_CONFIGS[0].name
