@@ -7,6 +7,7 @@ Aktuell konfigurierte Kategorien (`check_media_glamtools.py` → `CATEGORY_CONFI
 - Media supplied by Universitätsarchiv St. Gallen (Label: **HSG**)
 - Rahn Collection (Label: **Rahn**)
 - Breitinger Collection (Label: **Breitinger**)
+- Steinfels Collection (Label: **Steinfels**)
 
 ## Funktionsweise
 
