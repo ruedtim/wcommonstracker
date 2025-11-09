@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251108_030934_[4]):
+- Media files used: 0 (current total: 323)
+- Pages using media: +1 (current total: 954)
+- File views: 0 (current total: 934944)
+  Pages that started using media:
+    - idwiki: Alan Bloom (https://id.wikipedia.org/wiki/Alan_Bloom) now uses Internationales Management-Gespräch-Allan Bloom (3x4 cropped).jpg (https://commons.wikimedia.org/wiki/File%3AInternationales_Management-Gespr%C3%A4ch-Allan_Bloom_(3x4_cropped).jpg)
