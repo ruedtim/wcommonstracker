@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251113_104237_[1]):
+- Media files used: 0 (current total: 323)
+- Pages using media: +1 (current total: 954)
+- File views: +46 (current total: 934949)
+  Pages that started using media:
+    - dewiki: Rainer Hertrich (https://de.wikipedia.org/wiki/Rainer_Hertrich) now uses 32. ISC-Symposium 2002-Rainer Hertrich, CEO des Luft-, Raumfahrt- und Verteidigungs-Konzerns EADS (European Aeronautic Defence and Space Company)-HSGH 022-002475-03 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A32._ISC-Symposium_2002-Rainer_Hertrich%2C_CEO_des_Luft-%2C_Raumfahrt-_und_Verteidigungs-Konzerns_EADS_(European_Aeronautic_Defence_and_Space_Company)-HSGH_022-002475-03_(cropped).jpg)
