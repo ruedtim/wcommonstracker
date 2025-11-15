@@ -1,0 +1,10 @@
+Changes compared to previous report (2025-10_20251114_031911_[1]):
+- Media files used: 0 (current total: 323)
+- Pages using media: 0 (current total: 954)
+- File views: -530 (current total: 934419)
+  Pages that started using media:
+    - enwiki: Louis Schweitzer (https://en.wikipedia.org/wiki/Louis_Schweitzer) now uses 24. Internationales Management-Gespräch-Louis Schweitzer-HSGN 028-01002 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A24._Internationales_Management-Gespr%C3%A4ch-Louis_Schweitzer-HSGN_028-01002_(cropped).jpg)
+    - uzwiki: Yoshimasa Hayashi (https://uz.wikipedia.org/wiki/Yoshimasa_Hayashi) now uses 38. St.Gallen Symposium-Yoshimasa Hayashi-HSGN 028-01905.JPG (https://commons.wikimedia.org/wiki/File%3A38._St.Gallen_Symposium-Yoshimasa_Hayashi-HSGN_028-01905.JPG)
+  Pages that stopped using media:
+    - enwiki: Louis Schweitzer (businessman) (https://en.wikipedia.org/wiki/Louis_Schweitzer_(businessman)) stopped using 24. Internationales Management-Gespräch-Louis Schweitzer-HSGN 028-01002 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A24._Internationales_Management-Gespr%C3%A4ch-Louis_Schweitzer-HSGN_028-01002_(cropped).jpg)
+    - enwikinews: Nobel laureate writer from Peru, Vargas Llosa dies (https://en.wikinews.org/wiki/Nobel_laureate_writer_from_Peru%2C_Vargas_Llosa_dies) stopped using 18. Internationales Management-Gespräch 1988-Schriftsteller und Politiker Mario Vargas Llosa am Symposium-HSGH 022-000745-02 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A18._Internationales_Management-Gespr%C3%A4ch_1988-Schriftsteller_und_Politiker_Mario_Vargas_Llosa_am_Symposium-HSGH_022-000745-02_(cropped).jpg)
