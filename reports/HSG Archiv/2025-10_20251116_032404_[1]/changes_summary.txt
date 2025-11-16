@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251115_031402_[4]):
+- Media files used: 0 (current total: 323)
+- Pages using media: -1 (current total: 953)
+- File views: -6 (current total: 934413)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Fischer, L (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FFischer%2C_L) stopped using 39. St.Gallen Symposium-Leonhard H. Fischer-HSGN 028-01936.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Leonhard_H._Fischer-HSGN_028-01936.JPG)
