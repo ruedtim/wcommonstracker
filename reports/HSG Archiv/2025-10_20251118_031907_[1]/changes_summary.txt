@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251117_032247_[0]):
+- Media files used: 0 (current total: 323)
+- Pages using media: +1 (current total: 954)
+- File views: +2 (current total: 934415)
+  Pages that started using media:
+    - arzwiki: توماس ليمبيرجر (https://arz.wikipedia.org/wiki/%D8%AA%D9%88%D9%85%D8%A7%D8%B3_%D9%84%D9%8A%D9%85%D8%A8%D9%8A%D8%B1%D8%AC%D8%B1) now uses 35. ISC-Symposium-Thomas Limberger-HSGN 028-01797.JPG (https://commons.wikimedia.org/wiki/File%3A35._ISC-Symposium-Thomas_Limberger-HSGN_028-01797.JPG)
