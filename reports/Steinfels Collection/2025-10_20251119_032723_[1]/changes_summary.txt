@@ -1,0 +1,8 @@
+Changes compared to previous report (2025-10_20251118_032816_[0]):
+- Media files used: +1 (current total: 55)
+- Pages using media: +1 (current total: 62)
+- File views: 0 (current total: 72461)
+  Added media files:
+    - Zentralbibliothek Zürich - Das Heilige Thal Ein Charthauser Kloster in dem Land Gallmitz Vogtey Corbers in dem Canton Freyburg gelegen von Mittag anzusehen - 991119466839705501 (adjust).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Das_Heilige_Thal_Ein_Charthauser_Kloster_in_dem_Land_Gallmitz_Vogtey_Corbers_in_dem_Canton_Freyburg_gelegen_von_Mittag_anzusehen_-_991119466839705501_(adjust).jpg)
+  Pages that started using media:
+    - eswiki: Agustín de Lestrange (https://es.wikipedia.org/wiki/Agust%C3%ADn_de_Lestrange) now uses Zentralbibliothek Zürich - Das Heilige Thal Ein Charthauser Kloster in dem Land Gallmitz Vogtey Corbers in dem Canton Freyburg gelegen von Mittag anzusehen - 991119466839705501 (adjust).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Das_Heilige_Thal_Ein_Charthauser_Kloster_in_dem_Land_Gallmitz_Vogtey_Corbers_in_dem_Canton_Freyburg_gelegen_von_Mittag_anzusehen_-_991119466839705501_(adjust).jpg)
