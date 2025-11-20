@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-10_20251119_031814_[0]):
+- Media files used: 0 (current total: 323)
+- Pages using media: +1 (current total: 955)
+- File views: +16 (current total: 934431)
+  Pages that started using media:
+    - ptwiki: Louis Schweitzer (CEO) (https://pt.wikipedia.org/wiki/Louis_Schweitzer_(CEO)) now uses 24. Internationales Management-Gespräch-Louis Schweitzer-HSGN 028-01002 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A24._Internationales_Management-Gespr%C3%A4ch-Louis_Schweitzer-HSGN_028-01002_(cropped).jpg)
