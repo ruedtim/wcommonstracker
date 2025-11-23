@@ -1,0 +1,12 @@
+Changes compared to previous report (2025-10_20251122_031145_[0]):
+- Media files used: +1 (current total: 324)
+- Pages using media: 0 (current total: 955)
+- File views: 0 (current total: 934431)
+  Added media files:
+    - Prof. Dr. Johannes Anderegg (1996).tif (https://commons.wikimedia.org/wiki/File%3AProf._Dr._Johannes_Anderegg_(1996).tif)
+  Pages that started using media:
+    - enwiki: Muhammad Yunus (https://en.wikipedia.org/wiki/Muhammad_Yunus) now uses 25. Internationales Management-Gespräch-Muhammad Yunus im Gespräch mit Teilnehmenden-HSGN 028-01048.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch-Muhammad_Yunus_im_Gespr%C3%A4ch_mit_Teilnehmenden-HSGN_028-01048.jpg)
+    - wikidatawiki: Q1697162 (https://www.wikidata.org/wiki/Q1697162) now uses Prof. Dr. Johannes Anderegg (1996).tif (https://commons.wikimedia.org/wiki/File%3AProf._Dr._Johannes_Anderegg_(1996).tif)
+  Pages that stopped using media:
+    - enwiki: Muhammad Yunus (https://en.wikipedia.org/wiki/Muhammad_Yunus) stopped using 25. Internationales Management-Gespräch-Muhammad Yunus-HSGN 028-01022.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch-Muhammad_Yunus-HSGN_028-01022.jpg)
+    - wikidatawiki: Q1697162 (https://www.wikidata.org/wiki/Q1697162) stopped using HSGH 022-000858 Georges Fischer, Prof. Dr. Johannes Anderegg September 1996 (Anderegg cropped).tif (https://commons.wikimedia.org/wiki/File%3AHSGH_022-000858_Georges_Fischer%2C_Prof._Dr._Johannes_Anderegg_September_1996_(Anderegg_cropped).tif)
