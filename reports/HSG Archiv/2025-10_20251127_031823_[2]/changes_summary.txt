@@ -1,0 +1,7 @@
+Changes compared to previous report (2025-10_20251126_032110_[12]):
+- Media files used: 0 (current total: 324)
+- Pages using media: +2 (current total: 961)
+- File views: +78081 (current total: 1013234)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Henc (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FHenc) now uses 32. ISC-Symposium-Augustinus Heinrich Henckel von Donnersmarck-HSGN 028-01626.JPG (https://commons.wikimedia.org/wiki/File%3A32._ISC-Symposium-Augustinus_Heinrich_Henckel_von_Donnersmarck-HSGN_028-01626.JPG)
+    - enwiki: Ratan Tata (https://en.wikipedia.org/wiki/Ratan_Tata) now uses Shri Ratan Naval Tata.jpg (https://commons.wikimedia.org/wiki/File%3AShri_Ratan_Naval_Tata.jpg)
