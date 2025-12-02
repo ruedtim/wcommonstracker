@@ -1,0 +1,11 @@
+Changes compared to previous report (2025-11_20251201_035723_[0]):
+- Media files used: +1 (current total: 325)
+- Pages using media: +1 (current total: 963)
+- File views: +90571 (current total: 951645)
+  Added media files:
+    - Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945 (cropped 2).jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945_(cropped_2).jpg)
+  Pages that started using media:
+    - enwiki: Hans Jonas (https://en.wikipedia.org/wiki/Hans_Jonas) now uses Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945 (cropped 2).jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945_(cropped_2).jpg)
+    - enwiki: Jack Ma (https://en.wikipedia.org/wiki/Jack_Ma) now uses 31. ISC-Symposium-Jack Ma-HSGN 028-01561.jpg (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Jack_Ma-HSGN_028-01561.jpg)
+  Pages that stopped using media:
+    - enwiki: Hans Jonas (https://en.wikipedia.org/wiki/Hans_Jonas) stopped using Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945.jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945.jpg)
