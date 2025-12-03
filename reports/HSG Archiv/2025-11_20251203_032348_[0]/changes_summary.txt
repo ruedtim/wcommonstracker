@@ -1,0 +1,5 @@
+Changes compared to previous report (2025-11_20251202_032458_[3]):
+- Media files used: 0 (current total: 325)
+- Pages using media: 0 (current total: 963)
+- File views: 0 (current total: 951645)
+- No metric changes detected compared to the previous report.
