@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251204_032604_[0]):
+- Media files used: 0 (current total: 325)
+- Pages using media: +1 (current total: 964)
+- File views: +4 (current total: 951649)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Lug (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FLug) now uses Bernhard Luginbühl im Gespräch mit Alt-Rektor Dr. Johannes Anderegg-HSGH 022-001520-03.jpg (https://commons.wikimedia.org/wiki/File%3ABernhard_Luginb%C3%BChl_im_Gespr%C3%A4ch_mit_Alt-Rektor_Dr._Johannes_Anderegg-HSGH_022-001520-03.jpg)
