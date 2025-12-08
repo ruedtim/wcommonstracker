@@ -1,29 +1,29 @@
 {
-  "timestamp": "2025-12-07T03:40:11.935461+00:00",
+  "timestamp": "2025-12-08T03:26:42.056776+00:00",
   "total_changes": 0,
   "categories": [
     {
       "name": "Media supplied by Universitätsarchiv St. Gallen",
       "label": "HSG",
-      "report_directory": "reports/HSG Archiv/2025-11_20251207_034207_[0]",
+      "report_directory": "reports/HSG Archiv/2025-11_20251208_032832_[0]",
       "changes": 0
     },
     {
       "name": "Rahn Collection",
       "label": "Rahn",
-      "report_directory": "reports/Rahn Collection/2025-11_20251207_034557_[0]",
+      "report_directory": "reports/Rahn Collection/2025-11_20251208_033212_[0]",
       "changes": 0
     },
     {
       "name": "Breitinger Collection",
       "label": "Breitinger",
-      "report_directory": "reports/Breitinger Collection/2025-11_20251207_034923_[0]",
+      "report_directory": "reports/Breitinger Collection/2025-11_20251208_033527_[0]",
       "changes": 0
     },
     {
       "name": "Steinfels Collection",
       "label": "Steinfels",
-      "report_directory": "reports/Steinfels Collection/2025-11_20251207_035201_[0]",
+      "report_directory": "reports/Steinfels Collection/2025-11_20251208_033804_[0]",
       "changes": 0
     }
   ]
