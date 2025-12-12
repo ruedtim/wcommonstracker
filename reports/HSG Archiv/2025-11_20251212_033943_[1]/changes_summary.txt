@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251211_034010_[0]):
+- Media files used: 0 (current total: 325)
+- Pages using media: +1 (current total: 965)
+- File views: +121 (current total: 951770)
+  Pages that started using media:
+    - jawiki: アラン・ブルーム (哲学者) (https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%96%E3%83%AB%E3%83%BC%E3%83%A0_(%E5%93%B2%E5%AD%A6%E8%80%85)) now uses Internationales Management-Gespräch-Allan Bloom (3x4 cropped).jpg (https://commons.wikimedia.org/wiki/File%3AInternationales_Management-Gespr%C3%A4ch-Allan_Bloom_(3x4_cropped).jpg)
