@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251212_033943_[1]):
+- Media files used: 0 (current total: 325)
+- Pages using media: +1 (current total: 966)
+- File views: 0 (current total: 951770)
+  Pages that started using media:
+    - fiwiki: Bosnia ja Hertsegovinan korkea edustaja (https://fi.wikipedia.org/wiki/Bosnia_ja_Hertsegovinan_korkea_edustaja) now uses Wolfgang Petritsch 2003.JPG (https://commons.wikimedia.org/wiki/File%3AWolfgang_Petritsch_2003.JPG)
