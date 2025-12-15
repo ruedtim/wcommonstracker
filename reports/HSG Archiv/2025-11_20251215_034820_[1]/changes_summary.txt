@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251214_034347_[0]):
+- Media files used: 0 (current total: 325)
+- Pages using media: +1 (current total: 967)
+- File views: 0 (current total: 951770)
+  Pages that started using media:
+    - arzwiki: لسته رؤساء المجلس الوطنى السويسرى (https://arz.wikipedia.org/wiki/%D9%84%D8%B3%D8%AA%D9%87_%D8%B1%D8%A4%D8%B3%D8%A7%D8%A1_%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%89_%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%B3%D8%B1%D9%89) now uses HSGH 022 001571 Karl Emil Wild.tif (https://commons.wikimedia.org/wiki/File%3AHSGH_022_001571_Karl_Emil_Wild.tif)
