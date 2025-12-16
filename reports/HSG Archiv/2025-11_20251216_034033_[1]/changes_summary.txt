@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251215_034820_[1]):
+- Media files used: 0 (current total: 325)
+- Pages using media: -1 (current total: 966)
+- File views: -12332 (current total: 939438)
+  Pages that stopped using media:
+    - enwiki: Stelios Haji-Ioannou (https://en.wikipedia.org/wiki/Stelios_Haji-Ioannou) stopped using 31. ISC-Symposium-Stelios Haji-loannou-HSGN 028-01566.JPG (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Stelios_Haji-loannou-HSGN_028-01566.JPG)
