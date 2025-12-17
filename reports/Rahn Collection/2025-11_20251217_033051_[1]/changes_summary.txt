@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251216_034410_[0]):
+- Media files used: +1 (current total: 10)
+- Pages using media: +1 (current total: 11)
+- File views: +57 (current total: 97)
+  Pages that started using media:
+    - dewiki: Liste der Kulturgüter in Stein am Rhein (https://de.wikipedia.org/wiki/Liste_der_Kulturg%C3%BCter_in_Stein_am_Rhein) now uses Zentralbibliothek Zürich - Hohenklingen (nach H Zeller) - 991154061119705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Hohenklingen_(nach_H_Zeller)_-_991154061119705501.jpg)
