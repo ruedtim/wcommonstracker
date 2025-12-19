@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251218_032745_[0]):
+- Media files used: 0 (current total: 325)
+- Pages using media: +1 (current total: 967)
+- File views: +19242 (current total: 958680)
+  Pages that started using media:
+    - eswiki: Bombardeo de Guernica (https://es.wikipedia.org/wiki/Bombardeo_de_Guernica) now uses 27. Internationales Management Symposium 1997-Roman Herzog-HSGH 022-000754-09.jpg (https://commons.wikimedia.org/wiki/File%3A27._Internationales_Management_Symposium_1997-Roman_Herzog-HSGH_022-000754-09.jpg)
