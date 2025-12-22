@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251221_034450_[0]):
+- Media files used: +1 (current total: 326)
+- Pages using media: +1 (current total: 968)
+- File views: +5204 (current total: 963884)
+  Pages that started using media:
+    - enwiki: Neil Harbisson (https://en.wikipedia.org/wiki/Neil_Harbisson) now uses 47. St.Gallen Symposium 2017-Moderator Stephen Sackur (r.) im Gespräch mit Neil Harbisson (.l), Avantgarde-Künstler und Cyborg-Aktivist-HSGH 022-002441-02.jpg (https://commons.wikimedia.org/wiki/File%3A47._St.Gallen_Symposium_2017-Moderator_Stephen_Sackur_(r.)_im_Gespr%C3%A4ch_mit_Neil_Harbisson_(.l)%2C_Avantgarde-K%C3%BCnstler_und_Cyborg-Aktivist-HSGH_022-002441-02.jpg)
