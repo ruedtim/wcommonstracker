@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251224_034743_[0]):
+- Media files used: 0 (current total: 11)
+- Pages using media: +1 (current total: 8)
+- File views: +3 (current total: 8619)
+  Pages that started using media:
+    - wikidatawiki: Q55684024 (https://www.wikidata.org/wiki/Q55684024) now uses Zentralbibliothek Zürich - Breitinger, Robert - 991121399679705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Breitinger%2C_Robert_-_991121399679705501_(cropped).jpg)
