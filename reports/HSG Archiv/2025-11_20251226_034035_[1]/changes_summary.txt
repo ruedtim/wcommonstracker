@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251225_034241_[0]):
+- Media files used: 0 (current total: 326)
+- Pages using media: +1 (current total: 969)
+- File views: +458 (current total: 964342)
+  Pages that started using media:
+    - nlwiki: Lijst van staatshoofden van Duitsland (https://nl.wikipedia.org/wiki/Lijst_van_staatshoofden_van_Duitsland) now uses Roman Herzog 1997.jpg (https://commons.wikimedia.org/wiki/File%3ARoman_Herzog_1997.jpg)
