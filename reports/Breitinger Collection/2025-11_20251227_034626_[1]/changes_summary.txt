@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251226_034823_[0]):
+- Media files used: 0 (current total: 11)
+- Pages using media: +1 (current total: 9)
+- File views: 0 (current total: 8619)
+  Pages that started using media:
+    - dewiki: Liste von Denkmälern in Zürich (https://de.wikipedia.org/wiki/Liste_von_Denkm%C3%A4lern_in_Z%C3%BCrich) now uses Turnerdenkmal am Alpenquai.jpg (https://commons.wikimedia.org/wiki/File%3ATurnerdenkmal_am_Alpenquai.jpg)
