@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251227_033757_[0]):
+- Media files used: 0 (current total: 326)
+- Pages using media: +1 (current total: 970)
+- File views: +2231 (current total: 966573)
+  Pages that started using media:
+    - frwiki: Marches (https://fr.wikipedia.org/wiki/Marches) now uses Enzo Cucchi vor einem Ausschnitt seines Wandbilds-HSGH 022-001495-02.jpg (https://commons.wikimedia.org/wiki/File%3AEnzo_Cucchi_vor_einem_Ausschnitt_seines_Wandbilds-HSGH_022-001495-02.jpg)
