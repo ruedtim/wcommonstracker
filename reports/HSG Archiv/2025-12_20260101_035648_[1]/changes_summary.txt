@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-11_20251231_034336_[0]):
+- Media files used: 0 (current total: 326)
+- Pages using media: -1 (current total: 969)
+- File views: -150162 (current total: 816411)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Bie (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FBie) stopped using HSGH 022-002091 Thomas Bieger (2012).jpg (https://commons.wikimedia.org/wiki/File%3AHSGH_022-002091_Thomas_Bieger_(2012).jpg)

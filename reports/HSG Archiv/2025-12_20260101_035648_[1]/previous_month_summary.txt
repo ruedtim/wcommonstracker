@@ -1,0 +1,21 @@
+Month-over-month changes compared to earliest report from 2025-11 (2025-11_20251201_035723_[0]):
+- Media files used: +2 (current total: 326)
+- Pages using media: +7 (current total: 969)
+- File views: -44663 (current total: 816411)
+  Added media files:
+    - Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945 (cropped 2).jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945_(cropped_2).jpg)
+  Pages that started using media:
+    - arzwiki: لسته رؤساء المجلس الوطنى السويسرى (https://arz.wikipedia.org/wiki/%D9%84%D8%B3%D8%AA%D9%87_%D8%B1%D8%A4%D8%B3%D8%A7%D8%A1_%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%89_%D8%A7%D9%84%D8%B3%D9%88%D9%8A%D8%B3%D8%B1%D9%89) now uses HSGH 022 001571 Karl Emil Wild.tif (https://commons.wikimedia.org/wiki/File%3AHSGH_022_001571_Karl_Emil_Wild.tif)
+    - dewiki: Liste der Biografien/Lug (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FLug) now uses Bernhard Luginbühl im Gespräch mit Alt-Rektor Dr. Johannes Anderegg-HSGH 022-001520-03.jpg (https://commons.wikimedia.org/wiki/File%3ABernhard_Luginb%C3%BChl_im_Gespr%C3%A4ch_mit_Alt-Rektor_Dr._Johannes_Anderegg-HSGH_022-001520-03.jpg)
+    - enwiki: Hans Jonas (https://en.wikipedia.org/wiki/Hans_Jonas) now uses Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945 (cropped 2).jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945_(cropped_2).jpg)
+    - enwiki: Jack Ma (https://en.wikipedia.org/wiki/Jack_Ma) now uses 31. ISC-Symposium-Jack Ma-HSGN 028-01561.jpg (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Jack_Ma-HSGN_028-01561.jpg)
+    - enwiki: Neil Harbisson (https://en.wikipedia.org/wiki/Neil_Harbisson) now uses 47. St.Gallen Symposium 2017-Moderator Stephen Sackur (r.) im Gespräch mit Neil Harbisson (.l), Avantgarde-Künstler und Cyborg-Aktivist-HSGH 022-002441-02.jpg (https://commons.wikimedia.org/wiki/File%3A47._St.Gallen_Symposium_2017-Moderator_Stephen_Sackur_(r.)_im_Gespr%C3%A4ch_mit_Neil_Harbisson_(.l)%2C_Avantgarde-K%C3%BCnstler_und_Cyborg-Aktivist-HSGH_022-002441-02.jpg)
+    - eswiki: Bombardeo de Guernica (https://es.wikipedia.org/wiki/Bombardeo_de_Guernica) now uses 27. Internationales Management Symposium 1997-Roman Herzog-HSGH 022-000754-09.jpg (https://commons.wikimedia.org/wiki/File%3A27._Internationales_Management_Symposium_1997-Roman_Herzog-HSGH_022-000754-09.jpg)
+    - fiwiki: Bosnia ja Hertsegovinan korkea edustaja (https://fi.wikipedia.org/wiki/Bosnia_ja_Hertsegovinan_korkea_edustaja) now uses Wolfgang Petritsch 2003.JPG (https://commons.wikimedia.org/wiki/File%3AWolfgang_Petritsch_2003.JPG)
+    - frwiki: Marches (https://fr.wikipedia.org/wiki/Marches) now uses Enzo Cucchi vor einem Ausschnitt seines Wandbilds-HSGH 022-001495-02.jpg (https://commons.wikimedia.org/wiki/File%3AEnzo_Cucchi_vor_einem_Ausschnitt_seines_Wandbilds-HSGH_022-001495-02.jpg)
+    - jawiki: アラン・ブルーム (哲学者) (https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%96%E3%83%AB%E3%83%BC%E3%83%A0_(%E5%93%B2%E5%AD%A6%E8%80%85)) now uses Internationales Management-Gespräch-Allan Bloom (3x4 cropped).jpg (https://commons.wikimedia.org/wiki/File%3AInternationales_Management-Gespr%C3%A4ch-Allan_Bloom_(3x4_cropped).jpg)
+    - nlwiki: Lijst van staatshoofden van Duitsland (https://nl.wikipedia.org/wiki/Lijst_van_staatshoofden_van_Duitsland) now uses Roman Herzog 1997.jpg (https://commons.wikimedia.org/wiki/File%3ARoman_Herzog_1997.jpg)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Bie (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FBie) stopped using HSGH 022-002091 Thomas Bieger (2012).jpg (https://commons.wikimedia.org/wiki/File%3AHSGH_022-002091_Thomas_Bieger_(2012).jpg)
+    - enwiki: Hans Jonas (https://en.wikipedia.org/wiki/Hans_Jonas) stopped using Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945.jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945.jpg)
+    - enwiki: Stelios Haji-Ioannou (https://en.wikipedia.org/wiki/Stelios_Haji-Ioannou) stopped using 31. ISC-Symposium-Stelios Haji-loannou-HSGN 028-01566.JPG (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Stelios_Haji-loannou-HSGN_028-01566.JPG)
