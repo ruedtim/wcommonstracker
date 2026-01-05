@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-12_20260104_035734_[1]):
+- Media files used: 0 (current total: 326)
+- Pages using media: +1 (current total: 972)
+- File views: +4 (current total: 820630)
+  Pages that started using media:
+    - eowiki: Jaap de Hoop Scheffer (https://eo.wikipedia.org/wiki/Jaap_de_Hoop_Scheffer) now uses 35. ISC-Symposium-Jaap de Hoop Scheffer-HSGN 028-01761.JPG (https://commons.wikimedia.org/wiki/File%3A35._ISC-Symposium-Jaap_de_Hoop_Scheffer-HSGN_028-01761.JPG)
