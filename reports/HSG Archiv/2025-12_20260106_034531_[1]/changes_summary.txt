@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-12_20260105_040232_[1]):
+- Media files used: 0 (current total: 326)
+- Pages using media: +1 (current total: 973)
+- File views: 0 (current total: 820630)
+  Pages that started using media:
+    - hawiki: Yoshimasa Hayashi (https://ha.wikipedia.org/wiki/Yoshimasa_Hayashi) now uses 38. St.Gallen Symposium-Yoshimasa Hayashi-HSGN 028-01905.JPG (https://commons.wikimedia.org/wiki/File%3A38._St.Gallen_Symposium-Yoshimasa_Hayashi-HSGN_028-01905.JPG)
