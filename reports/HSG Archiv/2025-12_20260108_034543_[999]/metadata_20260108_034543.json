@@ -1,0 +1,26 @@
+{
+  "category": "Media supplied by Universitätsarchiv St. Gallen",
+  "depth": "12",
+  "year": "2025",
+  "month": "12",
+  "timestamp": "2026-01-08T03:45:44.781705+00:00",
+  "url": "https://glamtools.toolforge.org/glamorgan.html",
+  "page_title": "GLAMorgan",
+  "summary": {
+    "files_viewed": null,
+    "files_used": null,
+    "pages_used": null,
+    "wikis": null,
+    "views": null
+  },
+  "files": [],
+  "report_directory": "2025-12_20260108_034543_[999]",
+  "previous_report_directory": "2025-12_20260107_034606_[0]",
+  "diff_label": "[999]",
+  "summary_differences": {},
+  "changes": {
+    "added_usage": 0,
+    "removed_usage": 999,
+    "total_changes": 999
+  }
+}
