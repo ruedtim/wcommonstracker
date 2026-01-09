@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-12_20260108_035233_[0]):
+- Media files used: 0 (current total: 11)
+- Pages using media: +1 (current total: 10)
+- File views: +5 (current total: 8684)
+  Pages that started using media:
+    - dewiki: Baptist Hörbst (https://de.wikipedia.org/wiki/Baptist_H%C3%B6rbst) now uses Turnerdenkmal am Alpenquai.jpg (https://commons.wikimedia.org/wiki/File%3ATurnerdenkmal_am_Alpenquai.jpg)
