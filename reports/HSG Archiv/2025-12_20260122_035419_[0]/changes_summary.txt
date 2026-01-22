@@ -1,0 +1,5 @@
+Changes compared to previous report (2025-12_20260121_035000_[0]):
+- Media files used: 0 (current total: 0)
+- Pages using media: unknown (current total: unknown)
+- File views: unknown (current total: unknown)
+- No metric changes detected compared to the previous report.

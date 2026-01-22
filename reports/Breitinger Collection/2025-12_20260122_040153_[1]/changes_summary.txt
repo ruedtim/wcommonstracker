@@ -1,0 +1,6 @@
+Changes compared to previous report (2025-12_20260121_035624_[0]):
+- Media files used: +1 (current total: 12)
+- Pages using media: +1 (current total: 11)
+- File views: 0 (current total: 8684)
+  Pages that started using media:
+    - dewiki: Liste der Nebenflüsse der Limmat (https://de.wikipedia.org/wiki/Liste_der_Nebenfl%C3%BCsse_der_Limmat) now uses Zentralbibliothek Zürich - Baden. Beide Kirchen und Schloss - 991156684619705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Baden._Beide_Kirchen_und_Schloss_-_991156684619705501.jpg)
