@@ -1,0 +1,9 @@
+Month-over-month changes compared to earliest report from 2025-12 (2025-12_20260101_040222_[0]):
+- Media files used: +2 (current total: 12)
+- Pages using media: +2 (current total: 13)
+- File views: +3 (current total: 111)
+  Added media files:
+    - Zentralbibliothek Zürich - Hohenklingen (nach H Zeller) - 991154061119705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Hohenklingen_(nach_H_Zeller)_-_991154061119705501_(cropped).jpg)
+  Pages that started using media:
+    - wikidatawiki: Q137727334 (https://www.wikidata.org/wiki/Q137727334) now uses Zentralbibliothek Zürich - Hohenklingen (nach H Zeller) - 991154061119705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Hohenklingen_(nach_H_Zeller)_-_991154061119705501_(cropped).jpg)
+    - wikidatawiki: Q3586127 (https://www.wikidata.org/wiki/Q3586127) now uses Zentralbibliothek Zürich - Eglise De Moudon. Plan - 991068451909705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Eglise_De_Moudon._Plan_-_991068451909705501.jpg)

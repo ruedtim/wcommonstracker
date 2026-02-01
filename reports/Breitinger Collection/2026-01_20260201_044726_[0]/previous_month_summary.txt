@@ -1,0 +1,9 @@
+Month-over-month changes compared to earliest report from 2025-12 (2025-12_20260101_040810_[0]):
+- Media files used: +1 (current total: 12)
+- Pages using media: +2 (current total: 11)
+- File views: +1250 (current total: 9929)
+  Added media files:
+    - Zentralbibliothek Zürich - Heer Denkmal - 991100995919705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Heer_Denkmal_-_991100995919705501_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Baptist Hörbst (https://de.wikipedia.org/wiki/Baptist_H%C3%B6rbst) now uses Turnerdenkmal am Alpenquai.jpg (https://commons.wikimedia.org/wiki/File%3ATurnerdenkmal_am_Alpenquai.jpg)
+    - dewiki: Liste der Nebenflüsse der Limmat (https://de.wikipedia.org/wiki/Liste_der_Nebenfl%C3%BCsse_der_Limmat) now uses Zentralbibliothek Zürich - Baden. Beide Kirchen und Schloss - 991156684619705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Baden._Beide_Kirchen_und_Schloss_-_991156684619705501.jpg)

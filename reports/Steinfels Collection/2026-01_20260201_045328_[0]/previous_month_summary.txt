@@ -1,0 +1,8 @@
+Month-over-month changes compared to earliest report from 2025-12 (2025-12_20260101_041257_[0]):
+- Media files used: +1 (current total: 56)
+- Pages using media: +1 (current total: 63)
+- File views: +4713 (current total: 85292)
+  Added media files:
+    - Zentralbibliothek Zürich - Lage der Hülften-Schantze - 991098532369705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Lage_der_H%C3%BClften-Schantze_-_991098532369705501_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Hülftebächli (https://de.wikipedia.org/wiki/H%C3%BClfteb%C3%A4chli) now uses Zentralbibliothek Zürich - Lage der Hülften-Schantze - 991098532369705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Lage_der_H%C3%BClften-Schantze_-_991098532369705501_(cropped).jpg)
