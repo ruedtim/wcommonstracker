@@ -46,8 +46,8 @@ CATEGORY_CONFIGS: List[CategoryConfig] = [
         name="Media supplied by Universitätsarchiv St. Gallen",
         report_subdir="HSG Archiv",
         label="HSG",
-        max_wait_seconds=360,
-        initial_wait_seconds=30,
+        max_wait_seconds=60,
+        initial_wait_seconds=10,
     ),
     CategoryConfig(
         name="Rahn Collection",
