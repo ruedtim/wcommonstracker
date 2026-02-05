@@ -27,6 +27,8 @@ DEPTH = "12"
 DEFAULT_MAX_WAIT_SECONDS = 70
 DEFAULT_INITIAL_WAIT_SECONDS = 7
 STABILIZATION_CHECKS = 5
+RESULT_CATEGORY_LINE_PATTERN = re.compile(r"\b\d+\s+files in category tree\b", re.IGNORECASE)
+RESULT_VIEWS_PATTERN = re.compile(r"\bfile views in\b", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -44,8 +46,8 @@ CATEGORY_CONFIGS: List[CategoryConfig] = [
         name="Media supplied by Universitätsarchiv St. Gallen",
         report_subdir="HSG Archiv",
         label="HSG",
-        max_wait_seconds=180,
-        initial_wait_seconds=20,
+        max_wait_seconds=360,
+        initial_wait_seconds=30,
     ),
     CategoryConfig(
         name="Rahn Collection",
@@ -718,23 +720,58 @@ def wait_for_results(
     last_content_length = 0
     stable_count = 0
     found_table = False
+    found_category_line = False
+
+    def read_status_text() -> str:
+        try:
+            return driver.find_element(By.ID, "status").text.strip()
+        except Exception:
+            return ""
+
+    def has_loading_status(status_text: str) -> bool:
+        return bool(
+            re.search(r"loading page view data", status_text, re.IGNORECASE)
+            or re.search(r"pages\s+to\s+go\.\.\.", status_text, re.IGNORECASE)
+        )
+
+    def has_result_table() -> bool:
+        selectors = [
+            "#output table.table.table-striped",
+            "#output table.table-striped",
+            "#output .table-striped",
+        ]
+        for selector in selectors:
+            try:
+                if driver.find_elements(By.CSS_SELECTOR, selector):
+                    return True
+            except Exception:
+                continue
+        return False
+
+    def visible_output_text() -> str:
+        try:
+            output = driver.find_element(By.ID, "output")
+            return output.text or ""
+        except Exception:
+            return ""
 
     while time.time() < deadline:
+        output_text = visible_output_text()
         current_content = driver.page_source
         current_length = len(current_content)
         elapsed = int(time.time() - start_time)
+        status_text = read_status_text()
+        loading_active = has_loading_status(status_text)
 
-        has_category_msg = "files in category tree" in current_content.lower()
-        has_views_data = "file views in" in current_content.lower()
-        has_table = (
-            "<table class='table table-striped'>" in current_content
-            or '<table class="table table-striped">' in current_content
-        )
+        has_category_msg = bool(RESULT_CATEGORY_LINE_PATTERN.search(output_text))
+        has_views_data = bool(RESULT_VIEWS_PATTERN.search(output_text))
+        has_table = has_result_table()
 
-        if has_category_msg and not found_table:
-            print(f"✓ Found 'files in category tree' message ({elapsed}s)")
+        if has_category_msg and not found_category_line:
+            print(f"✓ Found result category line ({elapsed}s)")
+            found_category_line = True
 
-        if has_category_msg and has_views_data and has_table:
+        if has_category_msg and has_views_data and has_table and not loading_active:
             if not found_table:
                 print(f"✓ Found table with view data ({elapsed}s)")
                 found_table = True
@@ -753,19 +790,15 @@ def wait_for_results(
             stable_count = 0
             last_content_length = current_length
             if elapsed % 5 == 0:
-                print(f"  Waiting for table... ({elapsed}s)")
+                loading_note = f"; status='{status_text}'" if status_text else ""
+                print(f"  Waiting for table... ({elapsed}s{loading_note})")
 
         time.sleep(1)
 
-    if found_table:
-        total_elapsed = int(time.time() - start_time)
-        print(
-            f"Proceeding without full stabilization after {total_elapsed}s; content may still be updating."
-        )
-        return
-
+    status_text = read_status_text()
     raise TimeoutException(
-        f"Timed out after {max_wait_seconds}s waiting for GLAM Tools results."
+        "Timed out after "
+        f"{max_wait_seconds}s waiting for GLAM Tools results (status: '{status_text or 'n/a'}')."
     )
 
 
