@@ -1,0 +1,506 @@
+<html><head>
+<title>GLAMorgan</title>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="//tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//tools-static.wmflabs.org/cdnjs/ajax/libs/tether/1.1.1/css/tether.min.css">
+<link rel="stylesheet" type="text/css" href="/magnustools/resources/css/common.css">
+<script src="//tools-static.wmflabs.org/cdnjs/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="//tools-static.wmflabs.org/cdnjs/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
+<script src="//tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+<script src="/magnustools/resources/js/common.js"></script>
+<style type="text/css"></style>
+<script type="text/javascript"></script>
+<!--header_misc-->
+
+<script type="text/javascript">
+function bootstrap4_compatability () {
+	$('input[type=text]').addClass('form-control') ;
+	$('input[type=number]').addClass('form-control') ;
+//	$('input[type=select]').addClass('form-control') ;
+//	$('input[type=radio]').css({'padding-left':'20px'}) ;
+//	$('input[type=checkbox]').css({'padding-left':'20px'}) ;
+	$('textarea').addClass('form-control') ;
+}
+
+$(document).ready ( function () {
+	bootstrap4_compatability() ;
+} ) ;
+</script>
+
+</head>
+
+<body>
+
+
+<div class="container">
+<header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+  <div class="clearfix"><button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">☰</button></div>
+  <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+    <nav class="nav navbar-nav">
+		<a id="toolname" class="navbar-brand nav-item nav-link active" href="?">GLAMorgan</a>
+		<div class="pull-sm-right">
+		  <a target="_blank" class="nav-item nav-link l_manual" href="/magnustools">Tools</a>
+		  <a target="_blank" class="nav-item nav-link l_manual" href="//bitbucket.org/magnusmanske">Git</a>
+		  <a id="discuss_link" target="_blank" class="nav-item nav-link l_manual" href="//en.wikipedia.org/wiki/User_talk:Magnus_Manske">Talk</a>
+		  <a style="margin:0px;padding:0px;margin-top:4px;margin-left:10px;" href="/"><img src="//wikitech.wikimedia.org/w/images/c/cf/Labslogo_thumb.png" title="Powered by Wikimedia Labs" border="0" width="32px"></a>
+		</div>
+    </nav>
+</div></header>
+</div>
+
+
+<div class="container">
+
+  <div class="row">
+	<div style="float:right"><a target="_blank" href="https://en.wikipedia.org/wiki/Glamorgan"><img border="0" title="Location of Glamorgan in Wales" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/WalesGlamorganTrad.png/116px-WalesGlamorganTrad.png"></a></div>
+	<p class="lead">This tool is a variant of <a href="baglama2">baGLAMa2</a>. It can show the view number of pages that include files from a specific Commons category.
+	Human views only, article namespace only. 30K files max in category tree. This tool is run "live", so it may take a while to run.</p>
+  </div>
+  
+	<form id="theform" class="form">
+	<div class="row">
+		<div class="col-sm-2">Commons category:</div>
+		<div class="col-sm-4"><input type="text" id="category" class="form-control" value=""></div>
+		<div class="col-sm-1">Depth:</div>
+		<div class="col-sm-3"><input class="form-control" style="width:60px" type="number" id="depth" value="12"></div>
+	</div><div class="row">
+		<div class="col-sm-2">Year/month:</div>
+		<div class="col-sm-2"><input style="width:100px" type="number" class="form-control" id="year" value="2016"></div>
+		<div class="col-sm-2"><input class="form-control" style="width:60px" type="number" id="month" value="1"></div>
+	</div><div class="row">
+	<input type="submit" value="Get file usage data" class="btn btn-primary">
+	[<a href="#" id="demo">demo</a>]
+	<div id="status">Loading page view data, 197 pages to go...</div>
+  </div>
+	</form>
+  
+  <div id="output"></div>
+
+</div><!-- /.container -->
+
+<style>
+td.num {
+	font-family:Courier;
+	text-align:right;
+}
+table.secondary {
+	font-size:8pt;
+	width:100%;
+}
+table.secondary tr:hover{
+	background-color:#ccc;
+}
+table.secondary td {
+	padding:1px;
+}
+div.secondary_wrapper {
+	max-height:300px;
+	width:400px;
+	overflow:auto;
+}
+</style>
+
+    <script src="resources/js/jquery/jquery-2.1.4.min.js"></script>
+    <script src="resources/dist3/js/bootstrap.min.js"></script>
+    <script src="resources/js/common.js"></script>
+    <script src="resources/js/FileSaver.js"></script>
+    
+<script>
+
+var max_tries = 2 ;
+var max_running = 10 ;
+var initial_top_view = 25 ;
+
+var params = {} ;
+var files = {} ;
+var pages = {} ;
+var day1 = '' ;
+var day2 = '' ;
+var failed_pages = [] ;
+
+function daysInMonth ( year , month ) {
+	return 32 - new Date(year, month-1, 32).getDate();
+}
+
+function loadFileUsage ( category , depth , callback ) {
+	$.getJSON ( '//petscan.wmflabs.org/?callback=?' , {
+		lang:'commons',
+		project:'wikimedia',
+		cats:category,
+		ns:6,
+		depth:depth,
+		max:30000,
+		start:0,
+		format:'json',
+		giu:1,
+		doit:1,
+		redirects:0
+	} , function ( d ) {
+		files = d.pages ;
+		callback () ;
+	} ) ;
+}
+
+function wiki2project ( wiki ) {
+	if ( wiki == 'commonswiki' ) return 'commons.wikimedia' ;
+	if ( wiki == 'wikidatawiki' ) return 'wikidata.org' ;
+	if ( wiki == 'metawiki' ) return 'meta.wikimedia' ; // ?
+	if ( wiki == 'outreachwiki' ) return 'outreach.wikimedia' ; // ?
+	if ( wiki == 'specieswiki' ) return 'species.wikimedia' ;
+	var m = wiki.match ( /^(.+)(wik.+)$/ ) ;
+	if ( m.length != 3 ) {
+		console.log ( "Can not parse wiki" , wiki ) ;
+		return '' ;
+	}
+	if ( m[2] == 'wiki' ) m[2] = 'wikipedia' ;
+	return m[1] + '.' + m[2] ;
+}
+
+function loadPageViews ( callback ) {
+	var todo = [] ;
+	$.each ( pages , function ( key , v ) { todo.push ( key ) } ) ;
+	var running = 0 ;
+	var called = 0 ;
+	failed_pages = [] ;
+	
+	function loadNextPage () {
+		$('#status').html("Loading page view data, "+todo.length+" pages to go...") ;
+		if ( todo.length == 0 ) {
+			if ( called ) return ;
+			if ( running == 0 ) callback() ;
+			return ;
+		}
+		if ( running >= max_running ) return ;
+		running++ ;
+		var key = todo[0] ;
+		todo.shift() ;
+		
+		function tryAPI ( key , countdown ) {
+			var page = pages[key] ;
+			var project = wiki2project ( page.wiki ) ;
+			if ( project == '' ) return ;
+			var url = 'https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/'+project+'/all-access/user/'+encodeURIComponent(page.page)+'/daily/'+day1+'/'+day2 ;
+			$.get ( url , function ( d ) {
+				running-- ;
+				var total = 0 ;
+				$.each ( (d.items||[]) , function ( k , v ) { total += v.views } ) ;
+				pages[key].views = total ;
+				loadNextPage() ;
+			} , 'json' ) . fail ( function () {
+				if ( countdown > 0 ) {
+					setTimeout ( function () {
+						tryAPI ( key , countdown-1 ) ;
+					} , 500 ) ;
+					return ;
+				}
+				running-- ;
+				failed_pages.push ( key ) ;
+				loadNextPage() ;
+			} ) ;
+		}
+		
+		tryAPI ( key , max_tries ) ;
+		
+		
+		loadNextPage() ;
+	}
+	
+	
+	loadNextPage() ;
+}
+
+var stats = {} ;
+
+function computeStats() {
+	stats = {
+		viewed_files:0,
+		used_files:0,
+		used_by_wiki:{}
+	} ;
+	
+	// Views per file
+	$.each ( files , function ( k , file ) {
+		file.views = 0 ;
+		var used = false ;
+		var had_wiki = {} ;
+		$.each ( file.pages , function ( dummy , page_key ) {
+			used = true ;
+			file.views += (pages[page_key].views||0) * 1 ;
+			
+			// Used per wiki
+			var wiki = pages[page_key].wiki ;
+			if ( had_wiki[wiki] ) return ;
+			had_wiki[wiki] = true ;
+			if ( typeof stats.used_by_wiki[wiki] == 'undefined' ) stats.used_by_wiki[wiki] = 0 ;
+			stats.used_by_wiki[wiki]++ ;
+		} ) ;
+		if ( file.views > 0 ) stats.viewed_files++ ;
+		if ( used ) stats.used_files++ ;
+	} ) ;
+}
+
+function getWikiLink ( wiki , page ) {
+	var server = wiki.replace(/^(.+)(wik.+)$/,'$1.$2' ) ;
+	if ( wiki == 'wikidatawiki' ) server = 'www.wikidata' ;
+	else if ( wiki == 'commonswiki' ) server = 'commons.wikimedia' ;
+	else if ( server.match(/wiki$/) ) server += 'pedia' ;
+	var url = "https://"+server+".org/wiki/"+escattr(encodeURIComponent(page.replace(/ /g,'_'))) ;
+	var h = "<a href='"+url+"' target='_blank'>" ;
+	h += page.replace(/_/g,' ').replace(/^File:/,'') ;
+	h += "</a>" ;
+	return h ;
+}
+
+function showViewsPerFile ( max ) {
+	var tmp = [] ;
+	$.each ( files , function ( id , dummy ) { tmp.push ( id ) } ) ;
+	tmp = tmp.sort ( function ( a , b ) {
+		return files[b].views - files[a].views ;
+	} ) ;
+	
+	var footer = "" ;
+	if ( typeof max != 'undefined' ) {
+		if ( tmp.length > max ) footer = "<div>Showing only the top "+max+" files; <a href='#' onclick='showViewsPerFile();return false'>show all</a>.</div>" ;
+		while ( tmp.length > max ) tmp.pop() ;
+	}
+
+	var to_load = [] ;
+	var h = '' ;
+	h += "<table class='table table-striped'>" ;
+	h += "<thead><tr><th style='min-width:130px'>Image</th><th>Image title</th><th>Views</th><th>Used on pages</th></tr></thead><tbody>" ;
+	$.each ( tmp , function ( dummy , file_key ) {
+		var file = files[file_key] ;
+		var id = sanitizeID ( file_key ) ;
+		h += "<tr>" ;
+		h += "<td style='text-align:center'><img src='' id='"+id+"' /></td>" ;
+		to_load.push ( [ id , file.page_title ] ) ;
+		h += "<td>"+getWikiLink('commonswiki','File:'+file.page_title)+"</td>" ;
+		h += "<td class='num'>"+prettyNumber(file.views)+"</td>" ;
+		h += "<td>" ;
+		
+		if ( file.pages.length > 0 ) {
+			var tmp2 = [] ;
+			$.each ( file.pages , function ( k2 , v2 ) { tmp2.push ( k2 ) } ) ;
+			tmp2 = tmp2.sort ( function ( a , b ) {
+				return pages[file.pages[b]].views - pages[file.pages[a]].views ;
+			} ) ;
+			h += "<div class='secondary_wrapper'>" ;
+			h += "<table border=0 cellspacing=0 cellpadding=2 class='secondary'><tbody>" ;
+			$.each ( tmp2 , function ( dummy2 , subkey ) {
+				var page_key = file.pages[subkey] ;
+//			$.each ( file.pages , function ( dummy2 , page_key ) {
+				var page = pages[page_key] ;
+				h += "<tr>" ;
+				h += "<td style='width:60px;'>" + page.wiki + "</td>" ;
+				h += "<td style='width:100%'>" + getWikiLink(page.wiki,page.page) + "</td>" ;
+				h += "<td class='num' width='70px'>" + prettyNumber(page.views) + "</td>" ;
+				h += "</tr>" ;
+			} ) ;
+			h += "<tbody></table>" ;
+			h += "</div>" ;
+		}
+		
+		h += "</td>" ;
+		h += "</tr>" ;
+	} ) ;
+	h += "</tbody></table>" ;
+	h += footer ;
+	
+	$('#views_per_file').html ( h ) ;
+	$.each ( to_load , function ( k , v ) {
+		var id = v[0] ;
+		var file = v[1] ;
+		$.getJSON ( 'https://commons.wikimedia.org/w/api.php?callback=?' , {
+			action:'query',
+			titles:'File:'+file,
+			prop:'imageinfo',
+			iiprop:'url',
+			iiurlwidth:120,
+			iiurlheight:120,
+			format:'json'
+		} , function ( d ) {
+			$.each ( ((d.query||[]).pages||[]) , function ( k1 , v1 ) {
+				$('#'+id).attr('src',v1.imageinfo[0].thumburl) ;
+			} ) ;
+		} ) ;
+	} ) ;
+}
+
+function showResults () {
+	computeStats() ;
+	var h = "" ;
+	
+	h += "<div style='float:right'>" ;
+	h += "<a href='?" ;
+	$.each ( params , function ( k , v ) { h += "&"+k+"="+encodeURIComponent(v) ; } ) ;
+	h += "' id='permalink'>Permalink</a>" ;
+	h += "</div>" ;
+	h += "<h3>Overview</h3>" ;
+	h += "<div>" + prettyNumber(object_length(files)) + " files in category tree.</div>" ;
+	h += "<div>" + prettyNumber(stats.viewed_files) + " files were viewed, out of " + prettyNumber(stats.used_files) + " used.</div>" ;
+	h += "<div>" + prettyNumber(object_length(pages)) + " pages on " + prettyNumber(object_length(stats.used_by_wiki)) + " wikis use those files.</div>" ;
+
+	var total = 0 ;
+	$.each ( files , function ( k , v ) { total += v.views } ) ;
+	h += "<div>" + prettyNumber(total) + " file views in " + day1.replace(/^(\d\d\d\d)(\d\d)..$/,'$1-$2') + ".</div>" ;
+
+	if ( failed_pages.length > 0 ) {
+		h += "<div>Data for " + failed_pages.length + " pages could not be loaded from the WMF pageview API (404 error).</div>" ;
+//		h += '<div class="alert alert-warning" role="alert">'+prettyNumber(failed_pages.length)+' pages could not be checked for view data in the <a href="https://wikimedia.org/api/rest_v1/?doc" target="_blank">pageview API</a>.</div>' ;
+	}
+	
+	h += "<div style='margin-top:20px'><h3>Views per file</h3><div id='views_per_file'></div></div>" ;
+	
+	// Usage per wiki
+	h += "<h3>Use per wiki</h3>" ;
+	h += "<table class='table-condensed table-striped table-sm'><thead>" ;
+	h += "<tr><th>Wiki</th><th>Images used</th></tr>" ;
+	h += "</thead><tbody>" ;
+	
+	var tmp = [] ;
+	$.each ( stats.used_by_wiki , function ( k , v ) { tmp.push ( k ) } ) ;
+	tmp.sort ( function ( a , b ) { return stats.used_by_wiki[b]*1 - stats.used_by_wiki[a]*1 } ) ;
+	$.each ( tmp , function ( dummy , wiki ) {
+		h += "<tr>" ;
+		h += "<td>" + wiki + "</td>" ;
+		h += "<td class='num'>" + prettyNumber(stats.used_by_wiki[wiki]) + "</td>" ;
+		h += "</tr>" ;
+	} ) ;
+	
+	h += "</tbody></table>" ;
+	
+	// Download
+	try {
+		var isFileSaverSupported = !!new Blob;
+	} catch (e) {}
+	if ( isFileSaverSupported ) {
+		h += "<h3>Downloads</h3>" ;
+		h += "<p>Download " ;
+		h += "<a href='#' id='download_all'>files,pages,pageviews, and file usage</a> | " ;
+		h += "<a href='#' id='download_files'>files, and file usage</a>" ;
+		h += "</p>" ;
+	}
+	
+	$('#output').html ( h ) ;
+	
+	showViewsPerFile ( initial_top_view ) ;
+	
+	$('#download_all').click ( function () {
+		var out = [ "file\tpage_wiki\tpage_title\tpage_views\tfile_views\n" ] ;
+		$.each ( files , function ( k , file ) {
+			if ( file.pages.length == 0 ) {
+				out.push ( file.page_title+"\n" ) ;
+			} else {
+				$.each ( file.pages , function ( dummy , page_key ) {
+					out.push ( file.page_title + "\t" + pages[page_key].wiki + "\t" + pages[page_key].page + "\t" + (pages[page_key].views||0) + "\t" + file.views + "\n" ) ;
+				} ) ;
+			}
+		} ) ;
+		var blob = new Blob(out, {type: "text/plain;charset=utf-8"});
+		saveAs(blob, day1+".txt");
+		return false ;
+	} ) ;
+
+	$('#download_files').click ( function () {
+		var out = [ "file\tpages\tfile_views\n" ] ;
+		$.each ( files , function ( k , file ) {
+			out.push ( file.page_title + "\t" + file.pages.length + "\t" + file.views + "\n" ) ;
+		} ) ;
+		var blob = new Blob(out, {type: "text/plain;charset=utf-8"});
+		saveAs(blob, day1+".txt");
+		return false ;
+	} ) ;
+}
+
+$(document).ready ( function () {
+	$('#category').focus() ;
+	$('#demo').click ( function () {
+		$('#category').val ( 'Europeana 1989' ) ;
+		$('#theform').submit() ;
+		return false ;
+	} ) ;
+	$('#theform').submit ( function () {
+		var category = $('#category').val() ;
+		var depth = $('#depth').val()*1 ;
+		var year = $('#year').val()*1 ;
+		var month = $('#month').val()*1 ;
+		var s_month = (month<10?'0':'')+month ;
+		
+		params = {
+			category:category,
+			depth:depth,
+			year:year,
+			month:month
+		} ;
+
+		if ( year < 2015 || ( year == 2015 && month < 8 ) ) {
+			h += '<div class="alert alert-warning" role="alert">The <a href="https://wikimedia.org/api/rest_v1/?doc" target="_blank">pageview API</a> does not currently contain data before 2015-08.</div>' ;
+			return false ;
+		}
+		
+		day1 = ''+year+s_month+'01' ;
+		day2 = ''+year+s_month+daysInMonth(year,month) ;
+		
+		pages = {} ;
+		files = {} ;
+		
+		$('#output').html ( '' ) ;
+		$('#status').html("Loading file usage data...") ;
+		$('#status').show() ;
+		loadFileUsage ( category , depth , function () {
+			// Generate page list
+			$.each ( files , function ( file_id , file ) {
+				file.pages = [] ;
+				$.each ( (file.giu||[]) , function ( dummy , page ) {
+					if ( page.ns != 0 ) return ;
+					page.key = page.wiki+':'+page.page ;
+					if ( typeof pages[page.key] == 'undefined' ) {
+						pages[page.key] = page ;
+						pages[page.key].files = [] ;
+						pages[page.key].views = 0 ;
+					}
+					pages[page.key].files.push ( ''+file_id ) ;
+					file.pages.push ( page.key ) ;
+				} ) ;
+			} ) ;
+			
+			loadPageViews ( function () {
+				$('#status').hide() ;
+				showResults() ;
+			} ) ;
+		} ) ;
+
+		// Logging
+		$.getJSON ( 'https://tools.wmflabs.org/magnustools/logger.php?tool=glamorgan&method=run&callback=?' , function(j){} ) ;
+		
+		return false ;
+	} ) ;
+	
+	var date = new Date();
+	var year = date.getFullYear() ;
+	var last_month = date.getMonth() - 1 ;
+	if ( last_month < 0 ) {
+		last_month = 11 ;
+		year-- ;
+	}
+	
+	
+	params = getUrlVars() ;
+	if ( params.month == 'last' ) {
+		params.year = ''+year ;
+		params.month = ''+(last_month+1) ; // 1-based month
+	}
+	var possible = ['category','depth','year','month'] ;
+	var cnt = 0 ;
+	$.each ( possible , function ( k , v ) {
+		if ( typeof params[v] == 'undefined' ) return ;
+		$('#'+v).val ( params[v] ) ;
+		cnt++ ;
+	} ) ;
+	if ( cnt == possible.length ) $('#theform').submit() ;
+} ) ;
+</script>
+  
+
+</body></html>
