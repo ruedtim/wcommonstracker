@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-01_20260206_042325_[0]):
+- Media files used: 0 (current total: 329)
+- Pages using media: +2 (current total: 988)
+- File views: +340 (current total: 758649)
+  Pages that started using media:
+    - frwiki: Liste des chefs d'État allemands (https://fr.wikipedia.org/wiki/Liste_des_chefs_d'%C3%89tat_allemands) now uses Roman Herzog 1997.jpg (https://commons.wikimedia.org/wiki/File%3ARoman_Herzog_1997.jpg)
+    - nlwiki: Zoltán Kemény (https://nl.wikipedia.org/wiki/Zolt%C3%A1n_Kem%C3%A9ny) now uses Zoltan Kemeny bei der Installation des Messingreliefs im ehemaligen Intitutsgebäude der HSG HSGH 022-002429-02.jpg (https://commons.wikimedia.org/wiki/File%3AZoltan_Kemeny_bei_der_Installation_des_Messingreliefs_im_ehemaligen_Intitutsgeb%C3%A4ude_der_HSG_HSGH_022-002429-02.jpg)

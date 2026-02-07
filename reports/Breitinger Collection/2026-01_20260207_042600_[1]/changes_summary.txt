@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-01_20260206_043306_[0]):
+- Media files used: +1 (current total: 13)
+- Pages using media: +1 (current total: 12)
+- File views: 0 (current total: 9929)
+  Pages that started using media:
+    - dewiki: Oswald-Heer-Denkmal (https://de.wikipedia.org/wiki/Oswald-Heer-Denkmal) now uses Zentralbibliothek Zürich - Heer Denkmal - 991100995919705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Heer_Denkmal_-_991100995919705501_(cropped).jpg)
