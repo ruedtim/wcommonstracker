@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-01_20260212_043208_[0]):
+- Media files used: 0 (current total: 329)
+- Pages using media: +1 (current total: 989)
+- File views: -49924 (current total: 707965)
+  Pages that started using media:
+    - enwiki: Max Oertli (https://en.wikipedia.org/wiki/Max_Oertli) now uses Oertli, Max-Bronzeplastik beim Sportplatz-Künstler Max Oertli bei der Installation der Plastik-HSGH 022-001972-04.jpg (https://commons.wikimedia.org/wiki/File%3AOertli%2C_Max-Bronzeplastik_beim_Sportplatz-K%C3%BCnstler_Max_Oertli_bei_der_Installation_der_Plastik-HSGH_022-001972-04.jpg)
