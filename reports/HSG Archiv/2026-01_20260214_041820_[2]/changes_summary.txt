@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-01_20260213_042915_[1]):
+- Media files used: 0 (current total: 329)
+- Pages using media: +2 (current total: 991)
+- File views: -9286 (current total: 698679)
+  Pages that started using media:
+    - frwiki: Lester Thurow (https://fr.wikipedia.org/wiki/Lester_Thurow) now uses 13. Internationales Management-Gespräch-Lester C. Thurow-HSGN 028-00542.jpg (https://commons.wikimedia.org/wiki/File%3A13._Internationales_Management-Gespr%C3%A4ch-Lester_C._Thurow-HSGN_028-00542.jpg)
+    - zhwiki: 阿南·班雅拉春 (https://zh.wikipedia.org/wiki/%E9%98%BF%E5%8D%97%C2%B7%E7%8F%AD%E9%9B%85%E6%8B%89%E6%98%A5) now uses Anan Panyarachun 1995 cropped.jpg (https://commons.wikimedia.org/wiki/File%3AAnan_Panyarachun_1995_cropped.jpg)
