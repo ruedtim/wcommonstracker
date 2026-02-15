@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-01_20260214_041820_[2]):
+- Media files used: 0 (current total: 329)
+- Pages using media: -1 (current total: 990)
+- File views: +73864 (current total: 772543)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Fit (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FFit) stopped using 34. ISC-Symposium-Jürgen Fitschen-HSGN 028-01747.JPG (https://commons.wikimedia.org/wiki/File%3A34._ISC-Symposium-J%C3%BCrgen_Fitschen-HSGN_028-01747.JPG)
