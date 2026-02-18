@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-01_20260217_042800_[0]):
+- Media files used: 0 (current total: 329)
+- Pages using media: +2 (current total: 992)
+- File views: +31122 (current total: 799670)
+  Pages that started using media:
+    - enwiki: 1939 in Denmark (https://en.wikipedia.org/wiki/1939_in_Denmark) now uses Henning Christophersen 1990 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AHenning_Christophersen_1990_(cropped).jpg)
+    - nowiki: Politikkåret 2017 (https://no.wikipedia.org/wiki/Politikk%C3%A5ret_2017) now uses Roman Herzog 1997.jpg (https://commons.wikimedia.org/wiki/File%3ARoman_Herzog_1997.jpg)
