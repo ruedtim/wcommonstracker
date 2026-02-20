@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-01_20260219_042836_[0]):
+- Media files used: +1 (current total: 330)
+- Pages using media: +2 (current total: 994)
+- File views: +36916 (current total: 794953)
+  Pages that started using media:
+    - arwiki: فلاديمير لوميكو (https://ar.wikipedia.org/wiki/%D9%81%D9%84%D8%A7%D8%AF%D9%8A%D9%85%D9%8A%D8%B1_%D9%84%D9%88%D9%85%D9%8A%D9%83%D9%88) now uses UdSSR-Botschafter Vladimir B. Lomeiko während der Videokonferenz im Audimax am 15.10.1991 HSGH 022-002170-2 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AUdSSR-Botschafter_Vladimir_B._Lomeiko_w%C3%A4hrend_der_Videokonferenz_im_Audimax_am_15.10.1991_HSGH_022-002170-2_(cropped).jpg)
+    - enwiki: 1996 Portuguese presidential election (https://en.wikipedia.org/wiki/1996_Portuguese_presidential_election) now uses 25. Internationales Management-Gespräch-Portugiesischer Premierminister Anibal Cavaco Silva-HSGN 028-01023.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch-Portugiesischer_Premierminister_Anibal_Cavaco_Silva-HSGN_028-01023.jpg)
