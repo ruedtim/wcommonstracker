@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-01_20260221_041417_[0]):
+- Media files used: 0 (current total: 330)
+- Pages using media: -1 (current total: 993)
+- File views: +48324 (current total: 771612)
+  Pages that stopped using media:
+    - rowiki: Listă de oameni din statul Indiana (https://ro.wikipedia.org/wiki/List%C4%83_de_oameni_din_statul_Indiana) stopped using 19. Internationales Management-Gespräch-Allan Bloom-HSGN 028-00796.jpg (https://commons.wikimedia.org/wiki/File%3A19._Internationales_Management-Gespr%C3%A4ch-Allan_Bloom-HSGN_028-00796.jpg)
