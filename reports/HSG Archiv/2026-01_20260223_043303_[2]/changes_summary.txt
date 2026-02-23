@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-01_20260222_042614_[1]):
+- Media files used: +1 (current total: 331)
+- Pages using media: +1 (current total: 994)
+- File views: -17678 (current total: 753934)
+  Pages that started using media:
+    - enwiki: University of St. Gallen (https://en.wikipedia.org/wiki/University_of_St._Gallen) now uses Luftaufnahmen September 1996 HSG-Campus von Norden mit Blick auf die Stadt HSGH 022-001319.jpg (https://commons.wikimedia.org/wiki/File%3ALuftaufnahmen_September_1996_HSG-Campus_von_Norden_mit_Blick_auf_die_Stadt_HSGH_022-001319.jpg)
+    - jawiki: 皇后雅子 (https://ja.wikipedia.org/wiki/%E7%9A%87%E5%90%8E%E9%9B%85%E5%AD%90) now uses 33. ISC-Symposium-Hisashi Owada-HSGN 028-01695.JPG (https://commons.wikimedia.org/wiki/File%3A33._ISC-Symposium-Hisashi_Owada-HSGN_028-01695.JPG)
