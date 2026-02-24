@@ -1,0 +1,10 @@
+Changes compared to previous report (2026-01_20260223_043303_[2]):
+- Media files used: 0 (current total: 331)
+- Pages using media: +2 (current total: 996)
+- File views: +87846 (current total: 841780)
+  Pages that started using media:
+    - frwiki: Volkswagen Group (https://fr.wikipedia.org/wiki/Volkswagen_Group) now uses 16. Internationales Management-Gespräch-Karl Gustaf Ratjen-HSGN 028-00639.jpg (https://commons.wikimedia.org/wiki/File%3A16._Internationales_Management-Gespr%C3%A4ch-Karl_Gustaf_Ratjen-HSGN_028-00639.jpg)
+    - ptwiki: VI Governo Constitucional de Portugal (https://pt.wikipedia.org/wiki/VI_Governo_Constitucional_de_Portugal) now uses 25. Internationales Management-Gespräch-Portugiesischer Premierminister Anibal Cavaco Silva-HSGN 028-01023.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch-Portugiesischer_Premierminister_Anibal_Cavaco_Silva-HSGN_028-01023.jpg)
+    - rowiki: Listă de oameni din statul Colorado (https://ro.wikipedia.org/wiki/List%C4%83_de_oameni_din_statul_Colorado) now uses 14. Internationales Management-Gespräch-Robert H. Waterman-HSGN 028-00569.jpg (https://commons.wikimedia.org/wiki/File%3A14._Internationales_Management-Gespr%C3%A4ch-Robert_H._Waterman-HSGN_028-00569.jpg)
+  Pages that stopped using media:
+    - frwiki: Volkswagen (groupe automobile) (https://fr.wikipedia.org/wiki/Volkswagen_(groupe_automobile)) stopped using 16. Internationales Management-Gespräch-Karl Gustaf Ratjen-HSGN 028-00639.jpg (https://commons.wikimedia.org/wiki/File%3A16._Internationales_Management-Gespr%C3%A4ch-Karl_Gustaf_Ratjen-HSGN_028-00639.jpg)
