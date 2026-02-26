@@ -1,0 +1,8 @@
+Changes compared to previous report (2026-01_20260225_042907_[2]):
+- Media files used: +1 (current total: 333)
+- Pages using media: -1 (current total: 997)
+- File views: +161 (current total: 844752)
+  Pages that started using media:
+    - enwiki: List of Padma Bhushan award recipients (2000–2009) (https://en.wikipedia.org/wiki/List_of_Padma_Bhushan_award_recipients_(2000%E2%80%932009)) now uses 39. St.Gallen Symposium-Deepak S. Parekh-HSGN 028-01958.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Deepak_S._Parekh-HSGN_028-01958.JPG)
+  Pages that stopped using media:
+    - rowiki: Listă de oameni din statul Nebraska (https://ro.wikipedia.org/wiki/List%C4%83_de_oameni_din_statul_Nebraska) stopped using 16. Internationales Management-Gespräch-William C. Norris-HSGN 028-00628.jpg (https://commons.wikimedia.org/wiki/File%3A16._Internationales_Management-Gespr%C3%A4ch-William_C._Norris-HSGN_028-00628.jpg)
