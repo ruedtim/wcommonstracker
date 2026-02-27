@@ -1,0 +1,8 @@
+Changes compared to previous report (2026-01_20260226_042547_[2]):
+- Media files used: 0 (current total: 333)
+- Pages using media: 0 (current total: 997)
+- File views: -54227 (current total: 790525)
+  Pages that started using media:
+    - swwiki: Gao Shangquan (https://sw.wikipedia.org/wiki/Gao_Shangquan) now uses 27. Internationales Management Symposium 1997-Shongquorn Gao-HSGH 022-000754-02.jpg (https://commons.wikimedia.org/wiki/File%3A27._Internationales_Management_Symposium_1997-Shongquorn_Gao-HSGH_022-000754-02.jpg)
+  Pages that stopped using media:
+    - rowiki: Listă de oameni din statul Colorado (https://ro.wikipedia.org/wiki/List%C4%83_de_oameni_din_statul_Colorado) stopped using 14. Internationales Management-Gespräch-Robert H. Waterman-HSGN 028-00569.jpg (https://commons.wikimedia.org/wiki/File%3A14._Internationales_Management-Gespr%C3%A4ch-Robert_H._Waterman-HSGN_028-00569.jpg)
