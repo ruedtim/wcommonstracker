@@ -1,0 +1,12 @@
+Changes compared to previous report (2026-01_20260227_043348_[0]):
+- Media files used: 0 (current total: 13)
+- Pages using media: +1 (current total: 13)
+- File views: 0 (current total: 9929)
+  Pages that started using media:
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Turnerdenkmal am Alpenquai.jpg (https://commons.wikimedia.org/wiki/File%3ATurnerdenkmal_am_Alpenquai.jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - 2 Möwen - 991029729609705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_2_M%C3%B6wen_-_991029729609705501_(cropped).jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Abbruch der Tonhalle. Interieur - 991157743959705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Abbruch_der_Tonhalle._Interieur_-_991157743959705501_(cropped).jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Abbruch v. alten Häusern - 991088001239705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Abbruch_v._alten_H%C3%A4usern_-_991088001239705501_(cropped).jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Ansicht vom Guetli gegen St. Peter und Polytechnikum - 991080979789705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Ansicht_vom_Guetli_gegen_St._Peter_und_Polytechnikum_-_991080979789705501_(cropped).jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Badanstalt Enge. Innenansicht - 991026045109705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Badanstalt_Enge._Innenansicht_-_991026045109705501_(cropped).jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Breitinger, Robert - 991121399679705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Breitinger%2C_Robert_-_991121399679705501_(cropped).jpg)
