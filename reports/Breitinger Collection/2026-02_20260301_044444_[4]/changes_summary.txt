@@ -1,0 +1,9 @@
+Changes compared to previous report (2026-01_20260228_041428_[7]):
+- Media files used: +4 (current total: 17)
+- Pages using media: 0 (current total: 13)
+- File views: -2865 (current total: 7064)
+  Pages that started using media:
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Ballon Spelterini. Füllung a. d. Kasernenhof - 991089232119705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Ballon_Spelterini._F%C3%BCllung_a._d._Kasernenhof_-_991089232119705501.jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Pferderennen a. Allmend - 991064968519705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Pferderennen_a._Allmend_-_991064968519705501.jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Zürichsee. Hotel Baur, Schlitten im Vordergr. - 991014470219705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrichsee._Hotel_Baur%2C_Schlitten_im_Vordergr._-_991014470219705501.jpg)
+    - cswiki: Robert Breitinger (https://cs.wikipedia.org/wiki/Robert_Breitinger) now uses Zentralbibliothek Zürich - Zürichsee. Samariterstand - 991100849209705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrichsee._Samariterstand_-_991100849209705501.jpg)
