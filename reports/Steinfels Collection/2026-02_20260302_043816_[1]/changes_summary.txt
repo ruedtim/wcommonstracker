@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-02_20260301_045055_[0]):
+- Media files used: -1 (current total: 56)
+- Pages using media: -1 (current total: 68)
+- File views: -10481 (current total: 57665)
+  Pages that stopped using media:
+    - frwiki: Mulhouse (https://fr.wikipedia.org/wiki/Mulhouse) stopped using Zentralbibliothek Zürich - Mülhusium Alsatiae - 991049100429705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_M%C3%BClhusium_Alsatiae_-_991049100429705501.jpg)
