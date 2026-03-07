@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-02_20260306_041753_[0]):
+- Media files used: +1 (current total: 334)
+- Pages using media: +1 (current total: 1003)
+- File views: -66508 (current total: 708196)
+  Pages that started using media:
+    - enwiki: United Nations High Commissioner for Refugees (https://en.wikipedia.org/wiki/United_Nations_High_Commissioner_for_Refugees) now uses 32. ISC-Symposium-Ruud Lubbers-HSGN 028-01644.JPG (https://commons.wikimedia.org/wiki/File%3A32._ISC-Symposium-Ruud_Lubbers-HSGN_028-01644.JPG)
