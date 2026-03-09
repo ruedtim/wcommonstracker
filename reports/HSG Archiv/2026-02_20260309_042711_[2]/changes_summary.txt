@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-02_20260308_042059_[0]):
+- Media files used: 0 (current total: 334)
+- Pages using media: +2 (current total: 1005)
+- File views: +224083 (current total: 822252)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Amm (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FAmm) now uses Prof. Dr. Manuel Ammann.jpg (https://commons.wikimedia.org/wiki/File%3AProf._Dr._Manuel_Ammann.jpg)
+    - nlwiki: Ruud Lubbers (https://nl.wikipedia.org/wiki/Ruud_Lubbers) now uses 32. ISC-Symposium-Ruud Lubbers-HSGN 028-01644.JPG (https://commons.wikimedia.org/wiki/File%3A32._ISC-Symposium-Ruud_Lubbers-HSGN_028-01644.JPG)
