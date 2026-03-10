@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-02_20260309_042711_[2]):
+- Media files used: 0 (current total: 334)
+- Pages using media: +1 (current total: 1006)
+- File views: -253173 (current total: 569079)
+  Pages that started using media:
+    - nlwiki: Four Freedoms Award (https://nl.wikipedia.org/wiki/Four_Freedoms_Award) now uses 32. ISC-Symposium-Ruud Lubbers-HSGN 028-01644.JPG (https://commons.wikimedia.org/wiki/File%3A32._ISC-Symposium-Ruud_Lubbers-HSGN_028-01644.JPG)
