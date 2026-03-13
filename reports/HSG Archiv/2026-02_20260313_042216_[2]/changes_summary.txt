@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-02_20260312_042304_[0]):
+- Media files used: 0 (current total: 334)
+- Pages using media: +2 (current total: 1008)
+- File views: -624720 (current total: 198174)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Bie (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FBie) now uses HSGH 022-002091 Thomas Bieger (2012).jpg (https://commons.wikimedia.org/wiki/File%3AHSGH_022-002091_Thomas_Bieger_(2012).jpg)
+    - elwiki: Βραβείο Νόμπελ Οικονομικών Επιστημών (https://el.wikipedia.org/wiki/%CE%92%CF%81%CE%B1%CE%B2%CE%B5%CE%AF%CE%BF_%CE%9D%CF%8C%CE%BC%CF%80%CE%B5%CE%BB_%CE%9F%CE%B9%CE%BA%CE%BF%CE%BD%CE%BF%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD_%CE%95%CF%80%CE%B9%CF%83%CF%84%CE%B7%CE%BC%CF%8E%CE%BD) now uses Robert John Aumann close-up (cropped).JPG (https://commons.wikimedia.org/wiki/File%3ARobert_John_Aumann_close-up_(cropped).JPG)
