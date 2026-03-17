@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-02_20260316_044850_[1]):
+- Media files used: 0 (current total: 334)
+- Pages using media: +1 (current total: 1011)
+- File views: 0 (current total: 197770)
+  Pages that started using media:
+    - zhwiki: 常振明 (https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%8C%AF%E6%98%8E) now uses 38. St.Gallen Symposium-Chang Zhenming-HSGN 028-01920 (cropped).JPG (https://commons.wikimedia.org/wiki/File%3A38._St.Gallen_Symposium-Chang_Zhenming-HSGN_028-01920_(cropped).JPG)
