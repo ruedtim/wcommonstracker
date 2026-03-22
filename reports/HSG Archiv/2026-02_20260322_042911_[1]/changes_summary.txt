@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-02_20260319_043108_[0]):
+- Media files used: +1 (current total: 335)
+- Pages using media: +1 (current total: 1012)
+- File views: -2 (current total: 197768)
+  Pages that started using media:
+    - dewiki: Universitätsbibliothek St. Gallen (https://de.wikipedia.org/wiki/Universit%C3%A4tsbibliothek_St._Gallen) now uses Luftaufnahmen März 2005 Blick auf das Bibliotheksgebäude von Südosten HSGH 022-002399-04.jpg (https://commons.wikimedia.org/wiki/File%3ALuftaufnahmen_M%C3%A4rz_2005_Blick_auf_das_Bibliotheksgeb%C3%A4ude_von_S%C3%BCdosten_HSGH_022-002399-04.jpg)

@@ -1,0 +1,10 @@
+Changes compared to previous report (2026-02_20260319_043627_[1]):
+- Media files used: +2 (current total: 16)
+- Pages using media: +1 (current total: 16)
+- File views: 0 (current total: 0)
+  Added media files:
+    - Rahn Collection – drawings of Disentis Abbey (https://commons.wikimedia.org/wiki/File%3ARahn_Collection_%E2%80%93_drawings_of_Disentis_Abbey)
+    - Zentralbibliothek Zürich - Dissentis - 991123007469705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Dissentis_-_991123007469705501_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Kloster Disentis (https://de.wikipedia.org/wiki/Kloster_Disentis) now uses Zentralbibliothek Zürich - Disentis Marienkapelle im Klosterhof - 991123063559705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Disentis_Marienkapelle_im_Klosterhof_-_991123063559705501.jpg)
+    - dewiki: Kloster Disentis (https://de.wikipedia.org/wiki/Kloster_Disentis) now uses Zentralbibliothek Zürich - Dissentis - 991123007469705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Dissentis_-_991123007469705501_(cropped).jpg)
