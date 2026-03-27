@@ -1,0 +1,4 @@
+Changes compared to previous report (2026-02_20260326_044207_[0]):
+- Media files used: 0 (current total: 335)
+- Pages using media: 0 (current total: 1011)
+- File views: +74452 (current total: 665731)
