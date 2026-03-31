@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-02_20260330_045405_[0]):
+- Media files used: +1 (current total: 336)
+- Pages using media: +1 (current total: 1013)
+- File views: -237713 (current total: 452643)
+  Pages that started using media:
+    - dewiki: Universität St. Gallen (https://de.wikipedia.org/wiki/Universit%C3%A4t_St._Gallen) now uses Neuer Eingangsbereich 2010 Computer- und Rechercheplätze, ausgestellte Bücher und Magazine HSGH 022-002502-01.jpg (https://commons.wikimedia.org/wiki/File%3ANeuer_Eingangsbereich_2010_Computer-_und_Recherchepl%C3%A4tze%2C_ausgestellte_B%C3%BCcher_und_Magazine_HSGH_022-002502-01.jpg)
+    - ruwiki: Верховный представитель по Боснии и Герцеговине (https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D1%80%D1%85%D0%BE%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C_%D0%BF%D0%BE_%D0%91%D0%BE%D1%81%D0%BD%D0%B8%D0%B8_%D0%B8_%D0%93%D0%B5%D1%80%D1%86%D0%B5%D0%B3%D0%BE%D0%B2%D0%B8%D0%BD%D0%B5) now uses Wolfgang Petritsch 2003.JPG (https://commons.wikimedia.org/wiki/File%3AWolfgang_Petritsch_2003.JPG)
