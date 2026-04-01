@@ -1,0 +1,12 @@
+Month-over-month changes compared to earliest report from 2026-02 (2026-02_20260301_043724_[0]):
+- Media files used: +3 (current total: 16)
+- Pages using media: +2 (current total: 16)
+- File views: -1377 (current total: 12950)
+  Added media files:
+    - Rahn Collection – drawings of Disentis Abbey (https://commons.wikimedia.org/wiki/File%3ARahn_Collection_%E2%80%93_drawings_of_Disentis_Abbey)
+    - Zentralbibliothek Zürich - Dissentis - 991123007469705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Dissentis_-_991123007469705501_(cropped).jpg)
+    - Zentralbibliothek Zürich - Rathaus in Sursee - 991138323949705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Rathaus_in_Sursee_-_991138323949705501_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Kloster Disentis (https://de.wikipedia.org/wiki/Kloster_Disentis) now uses Zentralbibliothek Zürich - Disentis Marienkapelle im Klosterhof - 991123063559705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Disentis_Marienkapelle_im_Klosterhof_-_991123063559705501.jpg)
+    - dewiki: Kloster Disentis (https://de.wikipedia.org/wiki/Kloster_Disentis) now uses Zentralbibliothek Zürich - Dissentis - 991123007469705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Dissentis_-_991123007469705501_(cropped).jpg)
+    - wikidatawiki: Q29522569 (https://www.wikidata.org/wiki/Q29522569) now uses Zentralbibliothek Zürich - Rathaus in Sursee - 991138323949705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Rathaus_in_Sursee_-_991138323949705501_(cropped).jpg)
