@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-03_20260401_045533_[0]):
+- Media files used: 0 (current total: 336)
+- Pages using media: -2 (current total: 1011)
+- File views: -43199 (current total: 590085)
+  Pages that stopped using media:
+    - itwikibooks: Tradizione ebraica moderna/Capitolo 13 (https://it.wikibooks.org/wiki/Tradizione_ebraica_moderna%2FCapitolo_13) stopped using Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945.jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945.jpg)
+    - itwikibooks: Tradizione ebraica moderna/Capitolo 8 (https://it.wikibooks.org/wiki/Tradizione_ebraica_moderna%2FCapitolo_8) stopped using Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945.jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945.jpg)
