@@ -1,0 +1,9 @@
+Changes compared to previous report (2026-03_20260405_050252_[0]):
+- Media files used: +1 (current total: 57)
+- Pages using media: +1 (current total: 69)
+- File views: -62980 (current total: 0)
+  Added media files:
+    - Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - Zentralbibliothek Zürich - Zürich - 991102314679705501 cropped.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrich_-_991102314679705501_cropped.jpg)
+  Pages that started using media:
+    - dewiki: Geschichte der Stadt Zürich (https://de.wikipedia.org/wiki/Geschichte_der_Stadt_Z%C3%BCrich) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
