@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-03_20260409_044326_[0]):
+- Media files used: 0 (current total: 336)
+- Pages using media: -1 (current total: 1011)
+- File views: +141433 (current total: 688323)
+  Pages that stopped using media:
+    - incubatorwiki: Wp/ppl/Mario Vargas Llosa (https://incubator.wikipedia.org/wiki/Wp%2Fppl%2FMario_Vargas_Llosa) stopped using 18. Internationales Management-Gespräch 1988-Schriftsteller und Politiker Mario Vargas Llosa am Symposium-HSGH 022-000745-02.jpg (https://commons.wikimedia.org/wiki/File%3A18._Internationales_Management-Gespr%C3%A4ch_1988-Schriftsteller_und_Politiker_Mario_Vargas_Llosa_am_Symposium-HSGH_022-000745-02.jpg)
