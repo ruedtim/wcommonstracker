@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-03_20260412_045532_[3]):
+- Media files used: 0 (current total: 336)
+- Pages using media: +1 (current total: 1015)
+- File views: +113105 (current total: 676067)
+  Pages that started using media:
+    - wikidatawiki: Q17562059 (https://www.wikidata.org/wiki/Q17562059) now uses 26. Internationales Management Symposium-Helferin mit Schild Break over-HSGN 028-01097.jpg (https://commons.wikimedia.org/wiki/File%3A26._Internationales_Management_Symposium-Helferin_mit_Schild_Break_over-HSGN_028-01097.jpg)
