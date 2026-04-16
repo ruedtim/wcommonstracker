@@ -1,0 +1,11 @@
+Changes compared to previous report (2026-03_20260415_045429_[0]):
+- Media files used: +1 (current total: 337)
+- Pages using media: +3 (current total: 1018)
+- File views: +125859 (current total: 587268)
+  Added media files:
+    - 40. St.Gallen Symposium-Kaspar Villiger-HSGN 028-01978 (cropped).JPG (https://commons.wikimedia.org/wiki/File%3A40._St.Gallen_Symposium-Kaspar_Villiger-HSGN_028-01978_(cropped).JPG)
+    - 41. St.Gallen Symposium 2011-Porträt von Moritz Leuenberger (Ex-Bundesrat)-HSGH 022-002357-03 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A41._St.Gallen_Symposium_2011-Portr%C3%A4t_von_Moritz_Leuenberger_(Ex-Bundesrat)-HSGH_022-002357-03_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Monika Ribar (https://de.wikipedia.org/wiki/Monika_Ribar) now uses 39. St.Gallen Symposium-Monika Ribar-HSGN 028-01953.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Monika_Ribar-HSGN_028-01953.JPG)
+    - wikidatawiki: Q28745099 (https://www.wikidata.org/wiki/Q28745099) now uses 39. St.Gallen Symposium-Monika Ribar-HSGN 028-01953.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Monika_Ribar-HSGN_028-01953.JPG)
+    - zhwiki: 拉坦·塔塔 (https://zh.wikipedia.org/wiki/%E6%8B%89%E5%9D%A6%C2%B7%E5%A1%94%E5%A1%94) now uses Shri Ratan Naval Tata.jpg (https://commons.wikimedia.org/wiki/File%3AShri_Ratan_Naval_Tata.jpg)

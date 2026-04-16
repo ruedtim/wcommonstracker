@@ -1,0 +1,10 @@
+Changes compared to previous report (2026-03_20260415_051216_[0]):
+- Media files used: 0 (current total: 58)
+- Pages using media: +5 (current total: 76)
+- File views: +113694 (current total: 113694)
+  Pages that started using media:
+    - dewiki: Johann Melchior Füssli (https://de.wikipedia.org/wiki/Johann_Melchior_F%C3%BCssli) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - dewiki: Platzspitz (https://de.wikipedia.org/wiki/Platzspitz) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - dewiki: Stadtbefestigung Zürich (https://de.wikipedia.org/wiki/Stadtbefestigung_Z%C3%BCrich) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - enwiki: Altstadt (Zurich) (https://en.wikipedia.org/wiki/Altstadt_(Zurich)) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - enwiki: Bern (https://en.wikipedia.org/wiki/Bern) now uses Zentralbibliothek Zürich - Bern die Hauptstatt in Nüchtland ... - 991080724569705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Bern_die_Hauptstatt_in_N%C3%BCchtland_..._-_991080724569705501_(cropped).jpg)
