@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-03_20260416_045952_[3]):
+- Media files used: +1 (current total: 338)
+- Pages using media: +1 (current total: 1019)
+- File views: +31169 (current total: 618437)
+  Pages that started using media:
+    - eswiki: Martín Varsavsky (https://es.wikipedia.org/wiki/Mart%C3%ADn_Varsavsky) now uses 31. ISC-Symposium-Martín Varsavsky-HSGN 028-01554.jpg (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Mart%C3%ADn_Varsavsky-HSGN_028-01554.jpg)
