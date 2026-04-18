@@ -1,0 +1,8 @@
+Changes compared to previous report (2026-03_20260417_045724_[1]):
+- Media files used: 0 (current total: 338)
+- Pages using media: 0 (current total: 1019)
+- File views: +118332 (current total: 736769)
+  Pages that started using media:
+    - enwiki: Estée Lauder Companies (https://en.wikipedia.org/wiki/Est%C3%A9e_Lauder_Companies) now uses 33. ISC-Symposium-Jeanette Sarkisian Wagner-HSGN 028-01681.JPG (https://commons.wikimedia.org/wiki/File%3A33._ISC-Symposium-Jeanette_Sarkisian_Wagner-HSGN_028-01681.JPG)
+  Pages that stopped using media:
+    - enwiki: The Estée Lauder Companies (https://en.wikipedia.org/wiki/The_Est%C3%A9e_Lauder_Companies) stopped using 33. ISC-Symposium-Jeanette Sarkisian Wagner-HSGN 028-01681.JPG (https://commons.wikimedia.org/wiki/File%3A33._ISC-Symposium-Jeanette_Sarkisian_Wagner-HSGN_028-01681.JPG)
