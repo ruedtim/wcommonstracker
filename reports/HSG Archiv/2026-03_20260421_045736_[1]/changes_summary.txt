@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-03_20260420_052214_[1]):
+- Media files used: 0 (current total: 338)
+- Pages using media: +1 (current total: 1019)
+- File views: 0 (current total: 736762)
+  Pages that started using media:
+    - itwiki: Governo Antall (https://it.wikipedia.org/wiki/Governo_Antall) now uses 32. ISC-Symposium-Péter Ákos Bod-HSGN 028-01614.JPG (https://commons.wikimedia.org/wiki/File%3A32._ISC-Symposium-P%C3%A9ter_%C3%81kos_Bod-HSGN_028-01614.JPG)
