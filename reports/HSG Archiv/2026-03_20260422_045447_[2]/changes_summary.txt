@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-03_20260421_045736_[1]):
+- Media files used: 0 (current total: 338)
+- Pages using media: +2 (current total: 1021)
+- File views: +206 (current total: 736968)
+  Pages that started using media:
+    - dewiktionary: Kindle (https://de.wiktionary.org/wiki/Kindle) now uses 37. St.Gallen Symposium-Fred Kindle-HSGN 028-01896.JPG (https://commons.wikimedia.org/wiki/File%3A37._St.Gallen_Symposium-Fred_Kindle-HSGN_028-01896.JPG)
+    - enwiki: Bohdan Hawrylyshyn (https://en.wikipedia.org/wiki/Bohdan_Hawrylyshyn) now uses 17. Internationales Management-Gespräch-Bohdan Hawrylyshyn-HSGN 028-00689.jpg (https://commons.wikimedia.org/wiki/File%3A17._Internationales_Management-Gespr%C3%A4ch-Bohdan_Hawrylyshyn-HSGN_028-00689.jpg)
