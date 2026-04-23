@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-03_20260422_045447_[2]):
+- Media files used: 0 (current total: 338)
+- Pages using media: -1 (current total: 1020)
+- File views: -25 (current total: 736943)
+  Pages that stopped using media:
+    - bgwiki: Жак Сантер (https://bg.wikipedia.org/wiki/%D0%96%D0%B0%D0%BA_%D0%A1%D0%B0%D0%BD%D1%82%D0%B5%D1%80) stopped using 25. Internationales Management-Gespräch 1995-Jacques Santer, Präsident der EU-Kommission-HSGH 022-000752-04.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch_1995-Jacques_Santer%2C_Pr%C3%A4sident_der_EU-Kommission-HSGH_022-000752-04.jpg)
