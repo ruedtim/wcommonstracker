@@ -1,0 +1,10 @@
+Changes compared to previous report (2026-03_20260423_045946_[1]):
+- Media files used: +1 (current total: 339)
+- Pages using media: 0 (current total: 1020)
+- File views: +875 (current total: 737818)
+  Pages that started using media:
+    - bnwiki: বোহদান হাওরিলিশিন (https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A7%8B%E0%A6%B9%E0%A6%A6%E0%A6%BE%E0%A6%A8_%E0%A6%B9%E0%A6%BE%E0%A6%93%E0%A6%B0%E0%A6%BF%E0%A6%B2%E0%A6%BF%E0%A6%B6%E0%A6%BF%E0%A6%A8) now uses 17. Internationales Management-Gespräch-Bohdan Hawrylyshyn-HSGN 028-00689.jpg (https://commons.wikimedia.org/wiki/File%3A17._Internationales_Management-Gespr%C3%A4ch-Bohdan_Hawrylyshyn-HSGN_028-00689.jpg)
+    - enwiki: Stephan Schmidheiny (https://en.wikipedia.org/wiki/Stephan_Schmidheiny) now uses Stephan Schmidheiny, Präsident Stiftungsrat Schmidheiny-HSGH 022-000761.jpg (https://commons.wikimedia.org/wiki/File%3AStephan_Schmidheiny%2C_Pr%C3%A4sident_Stiftungsrat_Schmidheiny-HSGH_022-000761.jpg)
+  Pages that stopped using media:
+    - arzwiki: زولتان كيمنى (https://arz.wikipedia.org/wiki/%D8%B2%D9%88%D9%84%D8%AA%D8%A7%D9%86_%D9%83%D9%8A%D9%85%D9%86%D9%89) stopped using Zoltan Kemeny bei der Installation des Messingreliefs im ehemaligen Intitutsgebäude der HSG HSGH 022-002429-02.jpg (https://commons.wikimedia.org/wiki/File%3AZoltan_Kemeny_bei_der_Installation_des_Messingreliefs_im_ehemaligen_Intitutsgeb%C3%A4ude_der_HSG_HSGH_022-002429-02.jpg)
+    - arzwiki: والتر فورديرير (https://arz.wikipedia.org/wiki/%D9%88%D8%A7%D9%84%D8%AA%D8%B1_%D9%81%D9%88%D8%B1%D8%AF%D9%8A%D8%B1%D9%8A%D8%B1) stopped using Walter Maria Förderer erklärend mit Pfeife HSGH 022-000483-03.png (https://commons.wikimedia.org/wiki/File%3AWalter_Maria_F%C3%B6rderer_erkl%C3%A4rend_mit_Pfeife_HSGH_022-000483-03.png)
