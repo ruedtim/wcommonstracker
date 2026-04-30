@@ -1,0 +1,9 @@
+Changes compared to previous report (2026-03_20260429_053544_[7]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +1 (current total: 1017)
+- File views: -262 (current total: 738962)
+  Pages that started using media:
+    - dewiki: Hans L. Merkle (https://de.wikipedia.org/wiki/Hans_L._Merkle) now uses 13. Internationales Management-Gespräch-Hans Lutz Merkle-HSGN 028-00534 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A13._Internationales_Management-Gespr%C3%A4ch-Hans_Lutz_Merkle-HSGN_028-00534_(cropped).jpg)
+    - enwiki: List of nominees for the Nobel Memorial Prize in Economic Sciences (https://en.wikipedia.org/wiki/List_of_nominees_for_the_Nobel_Memorial_Prize_in_Economic_Sciences) now uses Robert John Aumann close-up (cropped).JPG (https://commons.wikimedia.org/wiki/File%3ARobert_John_Aumann_close-up_(cropped).JPG)
+  Pages that stopped using media:
+    - dewiki: Hans Lutz Merkle (https://de.wikipedia.org/wiki/Hans_Lutz_Merkle) stopped using 13. Internationales Management-Gespräch-Hans Lutz Merkle-HSGN 028-00534 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A13._Internationales_Management-Gespr%C3%A4ch-Hans_Lutz_Merkle-HSGN_028-00534_(cropped).jpg)
