@@ -1,0 +1,17 @@
+Month-over-month changes compared to earliest report from 2026-03 (2026-03_20260401_052224_[0]):
+- Media files used: +2 (current total: 58)
+- Pages using media: +8 (current total: 76)
+- File views: +111199 (current total: 111199)
+  Added media files:
+    - Zentralbibliothek Zürich - Bern die Hauptstatt in Nüchtland ... - 991080724569705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Bern_die_Hauptstatt_in_N%C3%BCchtland_..._-_991080724569705501_(cropped).jpg)
+    - Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - Zentralbibliothek Zürich - Zürich - 991102314679705501 cropped.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Z%C3%BCrich_-_991102314679705501_cropped.jpg)
+  Pages that started using media:
+    - dewiki: Bern (https://de.wikipedia.org/wiki/Bern) now uses Zentralbibliothek Zürich - Bern die Hauptstatt in Nüchtland ... - 991080724569705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Bern_die_Hauptstatt_in_N%C3%BCchtland_..._-_991080724569705501_(cropped).jpg)
+    - dewiki: Geschichte der Stadt Zürich (https://de.wikipedia.org/wiki/Geschichte_der_Stadt_Z%C3%BCrich) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - dewiki: Johann Melchior Füssli (https://de.wikipedia.org/wiki/Johann_Melchior_F%C3%BCssli) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - dewiki: Kloster Rathausen (https://de.wikipedia.org/wiki/Kloster_Rathausen) now uses Zentralbibliothek Zürich - Rathausen Rathouse - 991010296169705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Rathausen_Rathouse_-_991010296169705501.jpg)
+    - dewiki: Platzspitz (https://de.wikipedia.org/wiki/Platzspitz) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - dewiki: Stadtbefestigung Zürich (https://de.wikipedia.org/wiki/Stadtbefestigung_Z%C3%BCrich) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - enwiki: Altstadt (Zurich) (https://en.wikipedia.org/wiki/Altstadt_(Zurich)) now uses Zentralbibliothek Zürich - Die Statt Zürich - 991120154339705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Die_Statt_Z%C3%BCrich_-_991120154339705501_(cropped).jpg)
+    - enwiki: Bern (https://en.wikipedia.org/wiki/Bern) now uses Zentralbibliothek Zürich - Bern die Hauptstatt in Nüchtland ... - 991080724569705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Bern_die_Hauptstatt_in_N%C3%BCchtland_..._-_991080724569705501_(cropped).jpg)

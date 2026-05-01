@@ -1,0 +1,4 @@
+Month-over-month changes compared to earliest report from 2026-03 (2026-03_20260401_051413_[0]):
+- Media files used: 0 (current total: 17)
+- Pages using media: 0 (current total: 13)
+- File views: +6564 (current total: 6564)

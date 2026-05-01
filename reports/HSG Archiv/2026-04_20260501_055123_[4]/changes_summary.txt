@@ -1,0 +1,9 @@
+Changes compared to previous report (2026-03_20260430_054016_[3]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +4 (current total: 1021)
+- File views: -38203 (current total: 700759)
+  Pages that started using media:
+    - arzwiki: زولتان كيمنى (https://arz.wikipedia.org/wiki/%D8%B2%D9%88%D9%84%D8%AA%D8%A7%D9%86_%D9%83%D9%8A%D9%85%D9%86%D9%89) now uses Zoltan Kemeny bei der Installation des Messingreliefs im ehemaligen Intitutsgebäude der HSG HSGH 022-002429-02.jpg (https://commons.wikimedia.org/wiki/File%3AZoltan_Kemeny_bei_der_Installation_des_Messingreliefs_im_ehemaligen_Intitutsgeb%C3%A4ude_der_HSG_HSGH_022-002429-02.jpg)
+    - arzwiki: والتر فورديرير (https://arz.wikipedia.org/wiki/%D9%88%D8%A7%D9%84%D8%AA%D8%B1_%D9%81%D9%88%D8%B1%D8%AF%D9%8A%D8%B1%D9%8A%D8%B1) now uses Walter Maria Förderer erklärend mit Pfeife HSGH 022-000483-03.png (https://commons.wikimedia.org/wiki/File%3AWalter_Maria_F%C3%B6rderer_erkl%C3%A4rend_mit_Pfeife_HSGH_022-000483-03.png)
+    - dewiki: Liste der Biografien/Rib (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FRib) now uses 39. St.Gallen Symposium-Monika Ribar-HSGN 028-01953.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Monika_Ribar-HSGN_028-01953.JPG)
+    - eswiki: Bohdan Hawrilishin (https://es.wikipedia.org/wiki/Bohdan_Hawrilishin) now uses 17. Internationales Management-Gespräch-Bohdan Hawrylyshyn-HSGN 028-00689.jpg (https://commons.wikimedia.org/wiki/File%3A17._Internationales_Management-Gespr%C3%A4ch-Bohdan_Hawrylyshyn-HSGN_028-00689.jpg)
