@@ -1,0 +1,8 @@
+Changes compared to previous report (2026-04_20260501_055123_[4]):
+- Media files used: 0 (current total: 339)
+- Pages using media: 0 (current total: 1021)
+- File views: 0 (current total: 700759)
+  Pages that started using media:
+    - wikidatawiki: Q102334817 (https://www.wikidata.org/wiki/Q102334817) now uses 25. Internationales Management-Gespräch-Beat F. Schmid-HSGN 028-01031.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch-Beat_F._Schmid-HSGN_028-01031.jpg)
+  Pages that stopped using media:
+    - wikidatawiki: Q124285184 (https://www.wikidata.org/wiki/Q124285184) stopped using 25. Internationales Management-Gespräch-Beat F. Schmid-HSGN 028-01031.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch-Beat_F._Schmid-HSGN_028-01031.jpg)
