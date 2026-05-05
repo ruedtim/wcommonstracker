@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260503_054009_[0]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +1 (current total: 1022)
+- File views: +671 (current total: 701430)
+  Pages that started using media:
+    - ruwiki: Шаталин, Станислав Сергеевич (https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%2C_%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B5%D0%B2%D0%B8%D1%87) now uses 21. Internationales Management-Gespräch-Stanislaw S. Shatalin-HSGN 028-00888.jpg (https://commons.wikimedia.org/wiki/File%3A21._Internationales_Management-Gespr%C3%A4ch-Stanislaw_S._Shatalin-HSGN_028-00888.jpg)
