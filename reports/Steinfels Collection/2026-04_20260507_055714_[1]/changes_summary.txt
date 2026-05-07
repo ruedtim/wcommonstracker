@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260506_055812_[0]):
+- Media files used: 0 (current total: 58)
+- Pages using media: +1 (current total: 77)
+- File views: +5889 (current total: 116957)
+  Pages that started using media:
+    - frwiki: Berne (https://fr.wikipedia.org/wiki/Berne) now uses Zentralbibliothek Zürich - Bern die Hauptstatt in Nüchtland ... - 991080724569705501 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Bern_die_Hauptstatt_in_N%C3%BCchtland_..._-_991080724569705501_(cropped).jpg)
