@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260513_060455_[0]):
+- Media files used: +1 (current total: 17)
+- Pages using media: +1 (current total: 17)
+- File views: +2414 (current total: 28282)
+  Pages that started using media:
+    - itwiki: Mendrisio (https://it.wikipedia.org/wiki/Mendrisio) now uses Zentralbibliothek Zürich - Inschrift an der Thurmthüre von S. Giovanni in Mendrisio - 991137796629705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Inschrift_an_der_Thurmth%C3%BCre_von_S._Giovanni_in_Mendrisio_-_991137796629705501.jpg)
