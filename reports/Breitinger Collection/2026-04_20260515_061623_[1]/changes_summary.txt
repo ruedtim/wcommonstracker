@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260514_061152_[0]):
+- Media files used: +1 (current total: 18)
+- Pages using media: +1 (current total: 14)
+- File views: +8 (current total: 6543)
+  Pages that started using media:
+    - dewiktionary: stallion (https://de.wiktionary.org/wiki/stallion) now uses Zentralbibliothek Zürich - Hengst v. Hans Wunderli - 991158401409705501.jpg (https://commons.wikimedia.org/wiki/File%3AZentralbibliothek_Z%C3%BCrich_-_Hengst_v._Hans_Wunderli_-_991158401409705501.jpg)
