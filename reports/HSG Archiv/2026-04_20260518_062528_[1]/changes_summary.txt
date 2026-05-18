@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260516_053620_[0]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +1 (current total: 1023)
+- File views: +58 (current total: 699546)
+  Pages that started using media:
+    - dewiki: Lateinamerikanische Schuldenkrise (https://de.wikipedia.org/wiki/Lateinamerikanische_Schuldenkrise) now uses Paul A. Volcker (James D. Wolfensohn) am 19. Symposium 1989-HSGH 022-000765 (cropped) (2).jpg (https://commons.wikimedia.org/wiki/File%3APaul_A._Volcker_(James_D._Wolfensohn)_am_19._Symposium_1989-HSGH_022-000765_(cropped)_(2).jpg)
