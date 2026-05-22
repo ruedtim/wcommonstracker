@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260521_062052_[1]):
+- Media files used: 0 (current total: 339)
+- Pages using media: -1 (current total: 1024)
+- File views: -11 (current total: 699539)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Rib (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FRib) stopped using 39. St.Gallen Symposium-Monika Ribar-HSGN 028-01953.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Monika_Ribar-HSGN_028-01953.JPG)
