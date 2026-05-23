@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-04_20260522_061924_[1]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +1 (current total: 1025)
+- File views: 0 (current total: 699539)
+  Pages that started using media:
+    - ukwiki: Перша комісія Баррозу (https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%88%D0%B0_%D0%BA%D0%BE%D0%BC%D1%96%D1%81%D1%96%D1%8F_%D0%91%D0%B0%D1%80%D1%80%D0%BE%D0%B7%D1%83) now uses 31. ISC-Symposium-Benita Ferrero-Waldner-HSGN 028-01546.JPG (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Benita_Ferrero-Waldner-HSGN_028-01546.JPG)
+    - ukwiki: Перша комісія Баррозу (https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%88%D0%B0_%D0%BA%D0%BE%D0%BC%D1%96%D1%81%D1%96%D1%8F_%D0%91%D0%B0%D1%80%D1%80%D0%BE%D0%B7%D1%83) now uses 36. St.Gallen Symposium-Danuta Hübner-HSGN 028-01856.JPG (https://commons.wikimedia.org/wiki/File%3A36._St.Gallen_Symposium-Danuta_H%C3%BCbner-HSGN_028-01856.JPG)
