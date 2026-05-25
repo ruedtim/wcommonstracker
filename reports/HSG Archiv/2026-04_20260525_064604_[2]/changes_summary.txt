@@ -1,0 +1,8 @@
+Changes compared to previous report (2026-04_20260523_054936_[2]):
+- Media files used: 0 (current total: 339)
+- Pages using media: 0 (current total: 1025)
+- File views: +4506 (current total: 704045)
+  Pages that started using media:
+    - enwiki: List of prime ministers of Thailand (https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Thailand) now uses Anan Panyarachun 1995 cropped.jpg (https://commons.wikimedia.org/wiki/File%3AAnan_Panyarachun_1995_cropped.jpg)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Fischer, L (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FFischer%2C_L) stopped using 39. St.Gallen Symposium-Leonhard H. Fischer-HSGN 028-01936.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Leonhard_H._Fischer-HSGN_028-01936.JPG)
