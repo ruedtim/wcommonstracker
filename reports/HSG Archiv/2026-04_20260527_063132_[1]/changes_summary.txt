@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-04_20260526_061734_[0]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +1 (current total: 1026)
+- File views: +15 (current total: 704060)
+  Pages that started using media:
+    - eswiki: Ratan Tata (https://es.wikipedia.org/wiki/Ratan_Tata) now uses Shri Ratan Naval Tata.jpg (https://commons.wikimedia.org/wiki/File%3AShri_Ratan_Naval_Tata.jpg)
