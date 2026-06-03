@@ -1,0 +1,8 @@
+Changes compared to previous report (2026-05_20260602_065303_[0]):
+- Media files used: 0 (current total: 339)
+- Pages using media: 0 (current total: 1027)
+- File views: -59 (current total: 726767)
+  Pages that started using media:
+    - fawiki: رابرت اورویل اندرسن (https://fa.wikipedia.org/wiki/%D8%B1%D8%A7%D8%A8%D8%B1%D8%AA_%D8%A7%D9%88%D8%B1%D9%88%DB%8C%D9%84_%D8%A7%D9%86%D8%AF%D8%B1%D8%B3%D9%86) now uses 13. Internationales Management-Gespräch-Robert O. Anderson-HSGN 028-00547.jpg (https://commons.wikimedia.org/wiki/File%3A13._Internationales_Management-Gespr%C3%A4ch-Robert_O._Anderson-HSGN_028-00547.jpg)
+  Pages that stopped using media:
+    - nlwiki: Lijst van premiers van Luxemburg (https://nl.wikipedia.org/wiki/Lijst_van_premiers_van_Luxemburg) stopped using 25. Internationales Management-Gespräch 1995-Jacques Santer, Präsident der EU-Kommission-HSGH 022-000752-04.jpg (https://commons.wikimedia.org/wiki/File%3A25._Internationales_Management-Gespr%C3%A4ch_1995-Jacques_Santer%2C_Pr%C3%A4sident_der_EU-Kommission-HSGH_022-000752-04.jpg)
