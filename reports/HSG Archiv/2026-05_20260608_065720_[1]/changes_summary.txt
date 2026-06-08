@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-05_20260607_064143_[0]):
+- Media files used: 0 (current total: 339)
+- Pages using media: +1 (current total: 1040)
+- File views: +287 (current total: 727300)
+  Pages that started using media:
+    - frwiki: Roman Herzog (https://fr.wikipedia.org/wiki/Roman_Herzog) now uses Roman Herzog 1997.jpg (https://commons.wikimedia.org/wiki/File%3ARoman_Herzog_1997.jpg)
