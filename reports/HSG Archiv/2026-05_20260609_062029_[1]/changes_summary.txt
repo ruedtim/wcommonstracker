@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-05_20260608_065720_[1]):
+- Media files used: 0 (current total: 339)
+- Pages using media: -1 (current total: 1039)
+- File views: -11 (current total: 727289)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Jaco (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FJaco) stopped using 31. ISC-Symposium-Klaus J. Jacobs-HSGN 028-01550.jpg (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Klaus_J._Jacobs-HSGN_028-01550.jpg)
