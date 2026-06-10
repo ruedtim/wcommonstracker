@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-05_20260609_062029_[1]):
+- Media files used: +1 (current total: 340)
+- Pages using media: +2 (current total: 1041)
+- File views: +44 (current total: 727333)
+  Pages that started using media:
+    - enwiki: Coghuf (https://en.wikipedia.org/wiki/Coghuf) now uses HSGH 022-002205-11.png (https://commons.wikimedia.org/wiki/File%3AHSGH_022-002205-11.png)
+    - enwiki: Zenbee Mizoguchi (https://en.wikipedia.org/wiki/Zenbee_Mizoguchi) now uses 35. ISC-Symposium-Zembei Mizoguchi-HSGN 028-01803.JPG (https://commons.wikimedia.org/wiki/File%3A35._ISC-Symposium-Zembei_Mizoguchi-HSGN_028-01803.JPG)
