@@ -1,0 +1,7 @@
+Changes compared to previous report (2026-05_20260613_062847_[0]):
+- Media files used: +1 (current total: 341)
+- Pages using media: +2 (current total: 1043)
+- File views: +18 (current total: 727351)
+  Pages that started using media:
+    - cswikiquote: Igor Jurjevič Jurgens (https://cs.wikiquote.org/wiki/Igor_Jurjevi%C4%8D_Jurgens) now uses 39. St.Gallen Symposium-Igor Y. Yurgens-HSGN 028-01959.JPG (https://commons.wikimedia.org/wiki/File%3A39._St.Gallen_Symposium-Igor_Y._Yurgens-HSGN_028-01959.JPG)
+    - trwiki: Stelio Hacı-İoannou (https://tr.wikipedia.org/wiki/Stelio_Hac%C4%B1-%C4%B0oannou) now uses 31. ISC-Symposium-Stelios Haji-loannou-HSGN 028-01566.JPG (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Stelios_Haji-loannou-HSGN_028-01566.JPG)
