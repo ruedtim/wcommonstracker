@@ -1,0 +1,18 @@
+Changes compared to previous report (2026-05_20260615_073353_[2]):
+- Media files used: +1 (current total: 342)
+- Pages using media: +6 (current total: 1049)
+- File views: +18757 (current total: 746108)
+  Added media files:
+    - 20. Internationales Management-Gespräch-Sir Geoffrey Howe-HSGN 028-00825 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A20._Internationales_Management-Gespr%C3%A4ch-Sir_Geoffrey_Howe-HSGN_028-00825_(cropped).jpg)
+  Pages that started using media:
+    - dewiki: Liste der Biografien/Jaco (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FJaco) now uses 31. ISC-Symposium-Klaus J. Jacobs-HSGN 028-01550.jpg (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Klaus_J._Jacobs-HSGN_028-01550.jpg)
+    - dewiki: Peter Dachler (https://de.wikipedia.org/wiki/Peter_Dachler) now uses 18. Internationales Management-Gespräch-H. Peter Dachler-HSGN 028-00747.jpg (https://commons.wikimedia.org/wiki/File%3A18._Internationales_Management-Gespr%C3%A4ch-H._Peter_Dachler-HSGN_028-00747.jpg)
+    - enwiki: Geoffrey Howe (https://en.wikipedia.org/wiki/Geoffrey_Howe) now uses 20. Internationales Management-Gespräch-Sir Geoffrey Howe-HSGN 028-00825 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3A20._Internationales_Management-Gespr%C3%A4ch-Sir_Geoffrey_Howe-HSGN_028-00825_(cropped).jpg)
+    - frwikibooks: Dictionnaire de philosophie/Bioéthique (https://fr.wikibooks.org/wiki/Dictionnaire_de_philosophie%2FBio%C3%A9thique) now uses Hans Jonas an der Universität St. Gallen (1983) HSGH 022-001945 (cropped).jpg (https://commons.wikimedia.org/wiki/File%3AHans_Jonas_an_der_Universit%C3%A4t_St._Gallen_(1983)_HSGH_022-001945_(cropped).jpg)
+    - itwiki: Ministri delle finanze della Repubblica di Polonia (https://it.wikipedia.org/wiki/Ministri_delle_finanze_della_Repubblica_di_Polonia) now uses 21. Internationales Management-Gespräch-Leszek Balcerowicz-HSGN 028-00876.jpg (https://commons.wikimedia.org/wiki/File%3A21._Internationales_Management-Gespr%C3%A4ch-Leszek_Balcerowicz-HSGN_028-00876.jpg)
+    - itwiki: Umberto Agnelli (https://it.wikipedia.org/wiki/Umberto_Agnelli) now uses 26. Internationales Management Symposium-Umberto Agnelli-HSGN 028-01069.jpg (https://commons.wikimedia.org/wiki/File%3A26._Internationales_Management_Symposium-Umberto_Agnelli-HSGN_028-01069.jpg)
+    - nlwiki: Voorzitter van het Federal Reserve System (https://nl.wikipedia.org/wiki/Voorzitter_van_het_Federal_Reserve_System) now uses Paul A. Volcker (James D. Wolfensohn) am 19. Symposium 1989-HSGH 022-000765 (cropped) (2).jpg (https://commons.wikimedia.org/wiki/File%3APaul_A._Volcker_(James_D._Wolfensohn)_am_19._Symposium_1989-HSGH_022-000765_(cropped)_(2).jpg)
+    - urwiki: سٹیلیوس حاجی-آئیون (https://ur.wikipedia.org/wiki/%D8%B3%D9%B9%DB%8C%D9%84%DB%8C%D9%88%D8%B3_%D8%AD%D8%A7%D8%AC%DB%8C-%D8%A2%D8%A6%DB%8C%D9%88%D9%86) now uses 31. ISC-Symposium-Stelios Haji-loannou-HSGN 028-01566.JPG (https://commons.wikimedia.org/wiki/File%3A31._ISC-Symposium-Stelios_Haji-loannou-HSGN_028-01566.JPG)
+  Pages that stopped using media:
+    - nlwiki: Voorzitter van het Federal Reserve System (https://nl.wikipedia.org/wiki/Voorzitter_van_het_Federal_Reserve_System) stopped using Paul A. Volcker (James D. Wolfensohn) am 19. Symposium 1989-HSGH 022-000765.jpg (https://commons.wikimedia.org/wiki/File%3APaul_A._Volcker_(James_D._Wolfensohn)_am_19._Symposium_1989-HSGH_022-000765.jpg)
+    - ptwikiquote: Niklas Luhmann (https://pt.wikiquote.org/wiki/Niklas_Luhmann) stopped using HSGH 022-000941 Niklas Luhmann (cropped).png (https://commons.wikimedia.org/wiki/File%3AHSGH_022-000941_Niklas_Luhmann_(cropped).png)
