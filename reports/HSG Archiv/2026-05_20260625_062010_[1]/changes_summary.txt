@@ -1,0 +1,6 @@
+Changes compared to previous report (2026-05_20260623_061928_[10]):
+- Media files used: 0 (current total: 342)
+- Pages using media: -1 (current total: 1048)
+- File views: -6 (current total: 746102)
+  Pages that stopped using media:
+    - dewiki: Liste der Biografien/Amm (https://de.wikipedia.org/wiki/Liste_der_Biografien%2FAmm) stopped using Prof. Dr. Manuel Ammann.jpg (https://commons.wikimedia.org/wiki/File%3AProf._Dr._Manuel_Ammann.jpg)
